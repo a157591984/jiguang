@@ -1,0 +1,159 @@
+/*
+ * layer皮肤
+ * 作者：一☆非也!非也!☆一
+ * QQ:1056811341
+ */
+html #layui_layer_skinbootstrapstylecss{
+    display: none;
+    position: absolute;
+    width: 1989px;
+}
+body .layer-ext-bootstrap[type="dialog"]{
+    min-width: 320px;
+}
+body .layer-ext-bootstrap-msg[type="dialog"]{
+    min-width: 200px;
+}
+body .layer-ext-bootstrap .layui-layer-msg{
+    min-width: 170px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border:none;
+}
+body .layer-ext-bootstrap.layui-layer-dialog{
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border:none;
+}
+body .layer-ext-bootstrap.layui-layer-iframe,
+body .layer-ext-bootstrap.layui-layer-page{
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border:none;
+}
+body .layer-ext-bootstrap .layui-layer-title{
+    font-size: 14px;
+    color: #000;
+    padding: 0;
+    text-indent: 1em;
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体";
+    height: 50px;
+    line-height: 50px;
+    background: #FFF;
+    border-bottom: 1px solid #E5E5E5;
+}
+body .layer-ext-bootstrap .layui-layer-content .layui-layer-ico{
+    width: 35px;
+    height: 35px;
+    background: url(icon.png) no-repeat;
+    margin: 2px 0 0 0;
+}
+body .layer-ext-bootstrap .layui-layer-content .layui-layer-ico1{
+    background-position: -49px -2px;
+}
+body .layer-ext-bootstrap .layui-layer-content .layui-layer-ico2{
+    background-position: -98px -2px;
+}
+body .layer-ext-bootstrap .layui-layer-content .layui-layer-ico3{
+    background-position: -146px -2px;
+}
+body .layer-ext-bootstrap .layui-layer-content .layui-layer-ico4{
+    background-position: -1px -2px;
+}
+body .layer-ext-bootstrap .layui-layer-content .layui-layer-ico16{
+    background: url(loading.gif) no-repeat center;
+}
+body .layer-ext-bootstrap .layui-layer-setwin{
+    top: 11px;
+    right: 8px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin a{
+    width: 45px;
+    height: 29px;
+    margin: 0px;
+    background: url(icon.png) no-repeat;
+	transition:none;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-close1, body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-close2{
+    background-position: 0 -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-close1:hover, body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-close2:hover{
+    background-position: -45px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-max{
+    background-position: -90px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-max:hover{
+    background-position: -135px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-maxmin{
+    background-position: -180px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-maxmin:hover{
+    background-position: -225px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-min cite{
+    display: none;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-min{
+    background-position: -270px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-setwin .layui-layer-min:hover{
+    background-position: -315px -54px;
+}
+body .layer-ext-bootstrap .layui-layer-btn{
+    padding: 10px 0 20px;
+    text-align: center;
+}
+body .layer-ext-bootstrap .layui-layer-btn a{
+    font-size: 12px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 32px;
+    background: #F7F7F7;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    outline: none;
+    margin: 0 5px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    transition: all 0.3s;
+    color: #333;
+    border: 1px solid #DDD;
+}
+body .layer-ext-bootstrap .layui-layer-btn a:hover{
+    opacity: 0.65;
+}
+body .layer-ext-bootstrap .layui-layer-btn .layui-layer-btn0{
+    border-color:#159C77;
+    background: #159C77;
+    color: #FFF;
+}
+body .layer-ext-bootstrap .layui-layer-btn .layui-layer-btn0:hover{
+    opacity: 0.65;
+}
+body .layer-ext-bootstrap .layui-layer-load{
+    background: url(loading.gif) center center no-repeat #FFF
+}
+body .layer-ext-bootstrap .layui-layer-loading .layui-layer-content{
+    width: 32px;
+    height: 32px;
+    background: url(loading.gif) no-repeat
+}
+body .layer-ext-bootstrap .layui-layer-loading .layui-layer-loading1{
+    width: 32px;
+    height: 32px;
+    background: url(loading.gif) no-repeat
+}
+body .layer-ext-bootstrap .layui-layer-ico16, .layui-layer-loading .layui-layer-loading2{
+    width: 32px;
+    height: 32px;
+    background: url(loading.gif) no-repeat
+}

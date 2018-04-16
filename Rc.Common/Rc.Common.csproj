@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D4B851A-D494-4D67-9D41-5735D5DAA3F2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Rc.Common</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Rc\Common\AppUtility\HttpFile.cs" />
+    <Compile Include="Rc\Common\AppUtility\Mime.cs" />
+    <Compile Include="Rc\Common\AppUtility\XMLClass.cs" />
+    <Compile Include="Rc\Common\AppUtility\XMLVerifyExcel.cs" />
+    <Compile Include="Rc\Common\Base64.cs" />
+    <Compile Include="Rc\Common\clsSessionManager.cs" />
+    <Compile Include="Rc\Common\ConfigHelper.cs" />
+    <Compile Include="Rc\Common\Config\Consts.cs" />
+    <Compile Include="Rc\Common\Config\Resource_TypeConst.cs" />
+    <Compile Include="Rc\Common\Config\LessonPlan_TypeConst.cs" />
+    <Compile Include="Rc\Common\Config\Resource_ClassConst.cs" />
+    <Compile Include="Rc\Common\Config\Resource_VersionConst.cs" />
+    <Compile Include="Rc\Common\Config\UserPost.cs" />
+    <Compile Include="Rc\Common\DataCache.cs" />
+    <Compile Include="Rc\Common\DBUtility\EffentNextType.cs" />
+    <Compile Include="Rc\Common\DBUtility\CommandInfo.cs" />
+    <Compile Include="Rc\Common\DBUtility\DatabaseSQLHelperFactory.cs" />
+    <Compile Include="Rc\Common\DBUtility\DatabaseSQLHelper.cs" />
+    <Compile Include="Rc\Common\DBUtility\DbHelperSQL.cs" />
+    <Compile Include="Rc\Common\DBUtility\DbHelperSQLP.cs" />
+    <Compile Include="Rc\Common\DBUtility\DbHelperSQL_Operate.cs" />
+    <Compile Include="Rc\Common\DBUtility\DESEncrypt.cs" />
+    <Compile Include="Rc\Common\DBUtility\OracleDBHelper.cs" />
+    <Compile Include="Rc\Common\DBUtility\OracleHelper.cs" />
+    <Compile Include="Rc\Common\DBUtility\PubConstant.cs" />
+    <Compile Include="Rc\Common\DBUtility\sys.cs" />
+    <Compile Include="YunHuaTong\Lib\Encrypt.cs" />
+    <Compile Include="Rc\Common\EnumService.cs" />
+    <Compile Include="Rc\Common\LogContext.cs" />
+    <Compile Include="Rc\Common\PageValidate.cs" />
+    <Compile Include="Rc\Common\RemotWeb.cs" />
+    <Compile Include="Rc\Common\StrUtility\AjaxResult.cs" />
+    <Compile Include="Rc\Common\StrUtility\CacheClass.cs" />
+    <Compile Include="Rc\Common\StrUtility\clsExceptionEnum.cs" />
+    <Compile Include="Rc\Common\StrUtility\clsUtility.cs" />
+    <Compile Include="Rc\Common\StrUtility\CookieClass.cs" />
+    <Compile Include="Rc\Common\StrUtility\DESEncryptLogin.cs" />
+    <Compile Include="Rc\Common\StrUtility\EncryptUtility.cs" />
+    <Compile Include="Rc\Common\StrUtility\ExcelUtility.cs" />
+    <Compile Include="Rc\Common\StrUtility\ListExtension.cs" />
+    <Compile Include="Rc\Common\StrUtility\GUIDUtility.cs" />
+    <Compile Include="Rc\Common\StrUtility\StringExtenstion.cs" />
+    <Compile Include="Rc\Common\StrUtility\StringUtility.cs" />
+    <Compile Include="Rc\Common\StrUtility\XMLUtility.cs" />
+    <Compile Include="Rc\Common\SystemLog\SystemLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rc.Cloud.Model\Rc.Cloud.Model.csproj">
+      <Project>{0a691c87-7c2e-4268-bd45-228fa50718f8}</Project>
+      <Name>Rc.Cloud.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

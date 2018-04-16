@@ -1,0 +1,119 @@
+﻿/*header*/
+.header {
+    min-width: 1024px;
+    height: 50px;
+    background: #159C77;
+    padding: 0 15px;
+    position: fixed;
+    margin: auto;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+.header .logo {
+    width: 235px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #fff;
+}
+
+.header .nav {
+    float: left;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header .nav li {
+    float: left;
+    line-height: 50px;
+    position: relative;
+}
+
+.header .nav li span {
+    position: absolute;
+    z-index: 921127;
+    right: 2px;
+    top: 2px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    background: #f00;
+    border-radius: 3px 3px 3px 0;
+    padding: 0 6px;
+    color: #fff;
+}
+
+.header .nav a.active {
+    background: #008265;
+}
+
+.header .nav li.current ul {
+    display: block;
+}
+
+.header .nav li a {
+    color: #fff;
+    padding: 0 15px;
+    display: block;
+    height: 50px;
+}
+
+.header .nav.nav_userinfo {
+    float: right;
+}
+
+.header .nav.nav_userinfo a {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+/*二级菜单*/
+.header_subnav {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    height: 40px;
+    background: #008265;
+    z-index: 9999;
+}
+
+.header_subnav ul {
+    padding: 0 0 0 250px;
+}
+
+.header_subnav li {
+    float: left;
+}
+
+.header_subnav .userinfo {
+    width: 210px;
+    line-height: 40px;
+    padding: 0 10px 0 0;
+    text-align: right;
+    color: #fff;
+}
+
+.header_subnav li a {
+    padding: 8px 12px;
+    border-radius: 1px;
+    color: #fff;
+    margin: 7px 8px 0;
+    display: inline-block;
+    /*height: 37px;
+	padding: 0 8px 0 0;
+	font-size: 12px;
+	line-height: 40px;
+	color: #fff;
+	border-bottom: transparent solid 3px;
+	position: relative;
+	padding: 0 20px;
+	display: block;*/
+}
+
+.header_subnav li a.active {
+    background: #F79057;
+}

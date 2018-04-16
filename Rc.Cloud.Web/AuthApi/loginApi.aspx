@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="loginApi.aspx.cs" Inherits="Rc.Cloud.Web.AuthApi.loginApi" %>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>试卷分析</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/highcharts/js/highcharts.js"></script>
+    <script src="../js/highcharts.config.js"></script>
+    <script>
+        $(function () {
+
+            //双向细目表结构分析
+            $('.structural-hook').highcharts({
+                chart: {
+                    type: 'bar',
+                    backgroundColor: 'none',
+                    height: 300,
+                    marginTop: 60
+                },
+                title: {
+                    text: '大题题量分析',
+                    align: 'left',
+                    y: 25,
+                    style: {
+                        'fontSize': '14px',
+                        'fontWeight': '700'
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            allowOverlap: true
+                        },
+                        pointWidth: 12,
+                    }
+                },
+                legend: {
+                    itemDistance: 26,
+                    verticalAlign: 'bottom',
+                    itemMarginTop: 5,
+                    margin: 0
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '选择题',
+                    data: [10]
+                }, {
+                    name: '填空题',
+                    data: [6]
+                }, {
+                    name: '解答题',
+                    data: [7]
+                }]
+            });
+            //难度分析
+            $('.difficulty-hook').highcharts({
+                chart: {
+                    type: 'pie',
+                    backgroundColor: 'none',
+                    height: 300,
+                    marginTop: 60
+                },
+                title: {
+                    text: '难度分析',
+                    align: 'left',
+                    y: 25,
+                    style: {
+                        'fontSize': '14px',
+                        'fontWeight': '700'
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    pie: {
+                        showInLegend: true
+                    }
+                },
+                legend: {
+                    itemDistance: 26,
+                    verticalAlign: 'bottom',
+                    itemMarginTop: 5,
+                    margin: 0
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    type: 'pie',
+                    data: [
+                        ['简单', 45.0],
+                        ['中等', 26.8],
+                        ['困难', 8.5]
+                    ]
+                }]
+            });
+            //知识点分析
+            $('.knowledge-hook').highcharts({
+                chart: {
+                    type: 'bar',
+                    backgroundColor: 'none',
+                    height: 300,
+                    marginTop: 60
+                },
+                title: {
+                    text: '知识点分析',
+                    align: 'left',
+                    y: 25,
+                    style: {
+                        'fontSize': '14px',
+                        'fontWeight': '700'
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            allowOverlap: true
+                        },
+                        pointWidth: 12,
+                    }
+                },
+                legend: {
+                    itemDistance: 26,
+                    verticalAlign: 'bottom',
+                    itemMarginTop: 5,
+                    margin: 0
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '选择题',
+                    data: [10]
+                }, {
+                    name: '填空题',
+                    data: [6]
+                }, {
+                    name: '解答题',
+                    data: [7]
+                }]
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="pa">
+        <div class="structural-hook"></div>
+        <div class="difficulty-hook"></div>
+        <div class="knowledge-hook"></div>
+    </div>
+</body>
+</html>

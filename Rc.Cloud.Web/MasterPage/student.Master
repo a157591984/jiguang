@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="student.master.cs" Inherits="Homework.MasterPage.student" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%=Rc.Common.ConfigHelper.GetConfigString("WebSiteName") %></title>
+    <link href="../plugin/tree/tree.css" rel="stylesheet" />
+    <link href="../plugin/fontawesome/fontawesome.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/jquery.min-1.11.1.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugin/mtree-2.0/mtree.js"></script>
+    <script type="text/javascript" src="../plugin/layer/layer.js"></script>
+    <script type="text/javascript" src="../plugin/tree/tree.js"></script>
+    <script type="text/javascript" src="../js/json2.js"></script>
+    <script type="text/javascript" src="../js/jq.pagination.js"></script>
+    <script type="text/javascript" src="../js/jquery-jtemplates.js"></script>
+    <script type="text/javascript" src="../js/function.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="iframe-header">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="javascript:;">我的空间</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav header-navbar-hook">
+                            <li><a href="oHomework.aspx">我的作业</a></li>
+                            <li><a href="CorrectHomework.aspx">批改作业</a></li>
+                            <li><a href="classList.aspx">我的班级</a></li>
+                            <li><a href="allTeachingPlan.aspx">购买教案/习题</a></li>
+                            <li><a href="message.aspx">消息<asp:Literal runat="server" ID="ltlMsgCount"></asp:Literal></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="javascript:;" data-toggle="dropdown">
+                                    <i class="material-icons">&#xE853;</i>&nbsp;<asp:Literal runat="server" ID="ltlUserPost"></asp:Literal>&nbsp;学生</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="basicSetting.aspx">个人中心</a></li>
+                                    <li id="ahelp" runat="server" visible="false"><a href="../Help/FAQ.aspx" target="_blank">帮助</a></li>
+                                    <li>
+                                        <a href="<%=Rc.Common.StrUtility.clsUtility.getHostPath() %>/LogoutWeb.aspx">退出</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <asp:ContentPlaceHolder ID="JSContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        $(function () {
+            //导航默认状态
+            var arrUrl = [
+                ["oHomework.aspx", "classList.aspx", "allTeachingPlan.aspx", "message.aspx", "basicSetting.aspx"],
+                ["oHistoryHomework.aspx", "oWrongHomework.aspx", "AchievementTrack.aspx", "aggregateAnalysis.aspx", "DataAnalysisReportMultipleJobError.aspx", "RemedialPlan.aspx", "St_oHistoryHomework.aspx"],
+                ["classInfo.aspx", "classMember.aspx", "addClass.aspx"],
+                ["allMicroClass.aspx", "allTeaching.aspx", "Payment.aspx"],
+                [""],
+                ["safeSetting.aspx", "allOrder.aspx", "waitPay.aspx", "waitRate.aspx"]
+            ]
+            var hostUrl = window.location.pathname.toLowerCase();
+            hostUrl = hostUrl.substr(hostUrl.lastIndexOf("/") + 1);
+            var firstChk = SelectedMenu(hostUrl);//一级页面修改导航默认状态
+
+            if (!firstChk) {//根据二级页面修改导航默认状态
+                var arrParent = arrUrl[0].join(",").toLowerCase().split(",");
+                for (var i = 0; i < arrUrl.length; i++) {
+                    var arrSub = arrUrl[i].join(",").toLowerCase().split(",");
+                    var idx = $.inArray(hostUrl, arrSub);
+                    if (idx != -1) {
+                        SelectedMenu(arrParent[i - 1]);
+                        return;
+                    }
+                }
+            }
+
+        });
+        function SelectedMenu(hostUrl) {
+            var flag = false;
+            $(".header-navbar-hook > li").each(function () {
+                if (hostUrl == $(this).children('a').attr("href").toLowerCase()) {
+                    $(this).addClass("active");
+                    flag = true;
+                    return;
+                }
+            });
+            return flag;
+        }
+    </script>
+    <noscript>
+        <div style="padding: 15px; color: #8a6d3b; background: #fcf8e3; font-size: 16px; border: #faebcc solid 1px; position: fixed; z-index: 9999; top: 0; margin: auto; left: 0; right: 0; text-align: center;">对不起，你的浏览器不支持或者禁用了脚本功能。</div>
+    </noscript>
+</body>
+</html>

@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>试卷预览</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../plugin/layer/layer.js"></script>
+    <script>
+        $(function () {
+            $('.confirmation-test-paper-hook').on('click', function () {
+                layer.open({
+                    type: 2,
+                    title: '保存到',
+                    area: ['500px', '500px'],
+                    content: 'ChapterAssemblySelectSaveCatelog.html'
+                });
+            });
+
+            $(document).on('click', '.precize-topic-selection-hook', function () {
+                layer.open({
+                    type: 2,
+                    title: '精准选题',
+                    area: ['90%', '95%'],
+                    content: 'PrecizeTopicSelection.html'
+                });
+            })
+        })
+    </script>
+</head>
+<body class="body_bg">
+    <div class="container">
+        <div class='fixed_sidebar right mini bottom'>
+            <ul>
+                <li class='active confirmation-test-paper-hook'>
+                    <div class='link'>确认组卷</div>
+                </li>
+                <li class='active info'>
+                    <div class='link'>重新组卷</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="test_paper_panel">
+            <div class="panel_heading">
+                <div class="test_paper_name_panel">
+                    <div class="panel_heading">
+                        <div class="panel_title">
+                            <input type="text" name="name" class="form-control input-lg text-center" placeholder="试卷名称" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_body">
+                <div class="question_type_panel">
+                    <div class="panel_heading">
+                        <input type="text" name="name" class="form-control" placeholder="选择题" />
+                    </div>
+                </div>
+                <div class="question_panel">
+                    <div class="panel_stem">
+                        1. 50以内7的倍数有(　).(分值：3)
+                    </div>
+                    <div class="panel_option">
+                        <div class="option_item">选项A</div>
+                        <div class="option_item">选项B</div>
+                        <div class="option_item">选项C</div>
+                        <div class="option_item">选项D</div>
+                    </div>
+                    <div class="panel_answer">
+                        <div class="answer_heading">
+                            <div class="answer_item score">
+                                <span class="btn btn-info btn-sm btn-block">分值</span>
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <span class="btn btn-success btn-sm">参考答案</span>
+                            </div>
+                        </div>
+                        <div class="answer_body">
+                            <div class="answer_item score">
+                                5 分
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <div class="multi_panel">
+                                    <div class="panel_left">(1)</div>
+                                    <div class="panel_content">正确答案</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_opera">
+                        <div class="opera_control">
+                            <span class="btn"><i class="material-icons">&#xE627;</i>&nbsp;随机换题</span>
+                            <span class="btn precize-topic-selection-hook"><i class="material-icons">&#xE1B3;</i>&nbsp;精准选题</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="question_panel">
+                    <div class="panel_stem">
+                        1. 50以内7的倍数有(　).(分值：3)
+                    </div>
+                    <div class="panel_option">
+                        <div class="option_item">选项A</div>
+                        <div class="option_item">选项B</div>
+                        <div class="option_item">选项C</div>
+                        <div class="option_item">选项D</div>
+                    </div>
+                    <div class="panel_answer">
+                        <div class="answer_heading">
+                            <div class="answer_item score">
+                                <span class="btn btn-info btn-sm btn-block">分值</span>
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <span class="btn btn-success btn-sm">参考答案</span>
+                            </div>
+                        </div>
+                        <div class="answer_body">
+                            <div class="answer_item score">
+                                5 分
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <div class="multi_panel">
+                                    <div class="panel_left">(1)</div>
+                                    <div class="panel_content">正确答案</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_opera">
+                        <div class="opera_control">
+                            <span class="btn"><i class="material-icons">&#xE627;</i>&nbsp;随机换题</span>
+                            <span class="btn precize-topic-selection-hook"><i class="material-icons">&#xE1B3;</i>&nbsp;精准选题</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="question_panel">
+                    <div class="panel_stem">
+                        1. 50以内7的倍数有(　).(分值：3)
+                    </div>
+                    <div class="panel_option">
+                        <div class="option_item">选项A</div>
+                        <div class="option_item">选项B</div>
+                        <div class="option_item">选项C</div>
+                        <div class="option_item">选项D</div>
+                    </div>
+                    <div class="panel_answer">
+                        <div class="answer_heading">
+                            <div class="answer_item score">
+                                <span class="btn btn-info btn-sm btn-block">分值</span>
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <span class="btn btn-success btn-sm">参考答案</span>
+                            </div>
+                        </div>
+                        <div class="answer_body">
+                            <div class="answer_item score">
+                                5 分
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <div class="multi_panel">
+                                    <div class="panel_left">(1)</div>
+                                    <div class="panel_content">正确答案</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_opera">
+                        <div class="opera_control">
+                            <span class="btn"><i class="material-icons">&#xE627;</i>&nbsp;随机换题</span>
+                            <span class="btn precize-topic-selection-hook"><i class="material-icons">&#xE1B3;</i>&nbsp;精准选题</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="question_panel">
+                    <div class="panel_stem">
+                        1. 50以内7的倍数有(　).(分值：3)
+                    </div>
+                    <div class="panel_option">
+                        <div class="option_item">选项A</div>
+                        <div class="option_item">选项B</div>
+                        <div class="option_item">选项C</div>
+                        <div class="option_item">选项D</div>
+                    </div>
+                    <div class="panel_answer">
+                        <div class="answer_heading">
+                            <div class="answer_item score">
+                                <span class="btn btn-info btn-sm btn-block">分值</span>
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <span class="btn btn-success btn-sm">参考答案</span>
+                            </div>
+                        </div>
+                        <div class="answer_body">
+                            <div class="answer_item score">
+                                5 分
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <div class="multi_panel">
+                                    <div class="panel_left">(1)</div>
+                                    <div class="panel_content">正确答案</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_opera">
+                        <div class="opera_control">
+                            <span class="btn"><i class="material-icons">&#xE627;</i>&nbsp;随机换题</span>
+                            <span class="btn precize-topic-selection-hook"><i class="material-icons">&#xE1B3;</i>&nbsp;精准选题</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="question_panel">
+                    <div class="panel_stem">
+                        1. 50以内7的倍数有(　).(分值：3)
+                    </div>
+                    <div class="panel_option">
+                        <div class="option_item">选项A</div>
+                        <div class="option_item">选项B</div>
+                        <div class="option_item">选项C</div>
+                        <div class="option_item">选项D</div>
+                    </div>
+                    <div class="panel_answer">
+                        <div class="answer_heading">
+                            <div class="answer_item score">
+                                <span class="btn btn-info btn-sm btn-block">分值</span>
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <span class="btn btn-success btn-sm">参考答案</span>
+                            </div>
+                        </div>
+                        <div class="answer_body">
+                            <div class="answer_item score">
+                                5 分
+                            </div>
+                            <div class="answer_item reference_answer">
+                                <div class="multi_panel">
+                                    <div class="panel_left">(1)</div>
+                                    <div class="panel_content">正确答案</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_opera">
+                        <div class="opera_control">
+                            <span class="btn"><i class="material-icons">&#xE627;</i>&nbsp;随机换题</span>
+                            <span class="btn precize-topic-selection-hook"><i class="material-icons">&#xE1B3;</i>&nbsp;精准选题</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

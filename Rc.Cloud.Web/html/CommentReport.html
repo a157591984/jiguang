@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>讲评报告</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            var overview = '.overview-hook';
+            var overviewPanel = '.overview-panel-hook';
+            var legendToggle = '.legend-toggle-hook';
+            var $overview = $(overview);
+            var $overviewPanel = $(overviewPanel);
+            var $gobacktop = $('.gobacktop-hook');
+            var $catalogToggle = $(legendToggle);
+            //窗口缩放
+            $(window).on('resize', function () {
+                var overviewPanelWeight = $overviewPanel.outerWidth();
+                var scrollLeft = $(this).scrollLeft();
+                if ($(window).width() <= overviewPanelWeight) {
+                    $overviewPanel.css({
+                        left: - scrollLeft + 'px'
+                    });
+                } else {
+                    $overviewPanel.css({
+                        left: ''
+                    });
+                }
+            })
+
+            //页面滚动
+            $(document).on('scroll', function () {
+                //图例固定顶部
+                var scrollTop = $(this).scrollTop();
+                var scrollLeft = $(this).scrollLeft();
+                var overviewOffsetTop = $overview.offset().top;
+                var overviewPanelHeight = $overviewPanel.height();
+                var overviewPanelWeight = $overviewPanel.outerWidth();
+                if (scrollTop > overviewOffsetTop) {
+                    $overviewPanel.addClass('fiexd');
+                    $overview.height(overviewPanelHeight);
+                    $catalogToggle.show();
+                } else {
+                    $overviewPanel.removeClass('fiexd').show();
+                    $overview.height('');
+                    $catalogToggle.hide();
+                }
+                //横向滚动时图例的位置
+                if ($(window).width() <= overviewPanelWeight) {
+                    $overviewPanel.css({
+                        left: - scrollLeft + 'px'
+                    });
+                }
+
+                //返回顶部
+                if (scrollTop > 100) {
+                    $gobacktop.removeClass('hidden');
+                } else {
+                    $gobacktop.addClass('hidden');
+                }
+            });
+
+            //关闭页面
+            $('.close-page-hook').on('click', function () {
+                window.close();
+            });
+
+            //返回顶部
+            $gobacktop.on('click', function () {
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 150);
+            })
+
+            //显示/隐藏图例
+            $overview.on('click', legendToggle, function (e) {
+                $overviewPanel.toggle();
+            });
+        })
+    </script>
+</head>
+<body class="body_bg">
+    <div class="container container_comment_report">
+        <div class="test_paper_panel">
+            <!-- 悬浮工具 -->
+            <div class="fixed_sidebar right mini bottom">
+                <ul>
+                    <li class="close-page-hook">
+                        <div class="link">
+                            <i class="material-icons">&#xE14C;</i>
+                        </div>
+                        <div class="pop">关闭页面</div>
+                    </li>
+                    <li class="hidden gobacktop-hook">
+                        <div class="link">
+                            <i class="material-icons">&#xE5D8;</i>
+                        </div>
+                        <div class="pop">返回顶部</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel_heading">
+                <!-- 试卷名称 -->
+                <div class="test_paper_name_panel">
+                    <div class="panel_heading">
+                        <h3 class="panel_title">第一部分 第一章 第一节 1.2　因数和倍数</h3>
+                        <ul class="panel_info">
+                            <li>年级：16级中高职贯通</li>
+                            <li>班级：好好看</li>
+                            <li>学科：数学</li>
+                            <li>老师：宣荣国1</li>
+                            <li>满分60分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_body">
+                <!-- 得分概览 -->
+                <div class="overview overview-hook">
+                    <div class="catalog legend-toggle-hook">目录</div>
+                    <div class="overview_panel overview-panel-hook">
+                        <div class="panel_heading">
+                            <div class="panel_control">
+                                <i class="material-icons legend-close-hook">&#xE14C;</i>
+                            </div>
+                            <ul class="legend">
+                                <li class="desc">小题得分率区间划分图例</li>
+                                <li class="item"><i class="danger"></i>0-60%</li>
+                                <li class="item"><i class="warning"></i>60%-70%</li>
+                                <li class="item"><i class="info"></i>70%-85%</li>
+                                <li class="item"><i class="success"></i>85%-100%</li>
+                            </ul>
+                        </div>
+                        <div class="panel_body">
+                            <a href="javascript:;" class="danger">1</a>
+                            <a href="javascript:;" class="warning">2</a>
+                            <a href="javascript:;" class="info">3</a>
+                            <a href="javascript:;" class="success">4</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="question_type_panel">
+                    <div class="panel_heading">客观题</div>
+                </div>
+                <!-- 客观题 -->
+                <div class="objective_question_panel clearfix">
+                    <div class="panel_dt">
+                        <ul>
+                            <li>
+                                <span>题号</span>
+                                <span>参考答案</span>
+                                <span>学生答案</span>
+                                <span>得分</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel_dd">
+                        <ul>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li class="error">
+                                <span>2</span>
+                                <span>B</span>
+                                <span>C</span>
+                                <span>0.0</span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                            <li>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 题型 -->
+                <div class="question_type_panel">
+                    <div class="panel_heading">一、填空题</div>
+                </div>
+                <!-- 分数情况 -->
+                <div class="question_score_panel">
+                    <span class="total">总分：9</span><span class="score">得分：9</span><span class="points">扣分：0</span>
+                </div>
+                <!-- 题 -->
+                <div class="question_panel">
+                    <div class="panel_heading">
+                        <div class="panel_control">
+                            <span class="btn"><i class="material-icons"></i>&nbsp;解析</span>
+                            <span class="btn"><i class="material-icons"></i>&nbsp;解析</span>
+                        </div>
+                        <div class="panel_title">标题</div>
+                    </div>
+                    <!-- 题干 -->
+                    <div class="panel_stem">
+                        1. 50以内7的倍数有(　).(分值：3)
+                    </div>
+                    <!-- 选项 -->
+                    <div class="panel_option">
+                        <div class="option_item">选项A</div>
+                        <div class="option_item">选项B</div>
+                        <div class="option_item">选项C</div>
+                        <div class="option_item">选项D</div>
+                    </div>
+                    <!-- 答案 -->
+                    <div class="panel_answer">
+                        <div class="answer_heading">
+                            <div class="answer_item reference_answer">
+                                <span class="btn btn-success btn-sm">参考答案</span>
+                            </div>
+                            <div class="answer_item student_answer">
+                                <span class="btn btn-info btn-sm">学生答案</span>
+                            </div>
+                            <div class="answer_item score">
+                                <span class="btn btn-info btn-sm btn-block">得分</span>
+                            </div>
+                        </div>
+                        <div class="answer_body">
+                            <div class="answer_item reference_answer">
+                                <div class="multi_panel">
+                                    <div class="panel_left">(1)</div>
+                                    <div class="panel_content">参考答案</div>
+                                </div>
+                            </div>
+                            <div class="answer_item student_answer">
+                                <div class="answer">学生答案</div>
+                                <div class="score_list_panel">
+                                    <div class="panel_heading">
+                                        给分
+                                    </div>
+                                    <div class="panel_body">
+                                        <a href="javascript:;" class="active">1</a>
+                                        <a href="javascript:;">2</a>
+                                        <a href="javascript:;">3</a>
+                                        <a href="javascript:;">4</a>
+                                        <a href="javascript:;">5</a>
+                                        <a href="javascript:;">6</a>
+                                        <a href="javascript:;">7</a>
+                                        <a href="javascript:;">8</a>
+                                        <a href="javascript:;">9</a>
+                                        <a href="javascript:;">10</a>
+                                        <a href="javascript:;">1</a>
+                                        <a href="javascript:;">2</a>
+                                        <a href="javascript:;">3</a>
+                                        <a href="javascript:;">4</a>
+                                        <a href="javascript:;">5</a>
+                                        <a href="javascript:;">6</a>
+                                        <a href="javascript:;">7</a>
+                                        <a href="javascript:;">8</a>
+                                        <a href="javascript:;">9</a>
+                                        <a href="javascript:;">10</a>
+                                        <a href="javascript:;">1</a>
+                                        <a href="javascript:;">2</a>
+                                        <a href="javascript:;">3</a>
+                                        <a href="javascript:;">4</a>
+                                        <a href="javascript:;">5</a>
+                                        <a href="javascript:;">6</a>
+                                        <a href="javascript:;">7</a>
+                                        <a href="javascript:;">8</a>
+                                        <a href="javascript:;">9</a>
+                                        <a href="javascript:;">10</a>
+                                        <a href="javascript:;">1</a>
+                                        <a href="javascript:;">2</a>
+                                        <a href="javascript:;">3</a>
+                                        <a href="javascript:;">4</a>
+                                        <a href="javascript:;">5</a>
+                                        <a href="javascript:;">6</a>
+                                        <a href="javascript:;">7</a>
+                                        <a href="javascript:;">8</a>
+                                        <a href="javascript:;">9</a>
+                                        <a href="javascript:;">10</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer_item score">
+                                <input type="text" class="form-control input-sm" name="" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作条 -->
+                    <div class="panel_opera">
+                        <div class="opera_control">
+                            <span class="btn"><i class="material-icons">&#xE8B0;</i>&nbsp;解析</span>
+                            <span class="btn">更多&nbsp;<i class="material-icons">&#xE313;</i></span>
+                        </div>
+                    </div>
+                    <!-- 其他 -->
+                    <div class="panel_other">
+                        <dl class="other_attr">
+                            <dt>平均得分：</dt>
+                            <dd>数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念数与运算/数的整除/倍数的有关概念</dd>
+                            <dt>知识内容：</dt>
+                            <dd>-</dd>
+                            <dt>测量目标：</dt>
+                            <dd>1.1 基础知识和基本技能/理解“数与运算”中的相关知识.</dd>
+                            <dt>答　　案：</dt>
+                            <dd>7，14，21，28，35，42，49.</dd>
+                            <dt>答题情况：</dt>
+                            <dd class="anwering">
+                                <div class="anwering_choice">
+                                    <div class="progress_panel clearfix">
+                                        <div class="panel_heading">选项 A</div>
+                                        <div class="panel_body">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel_footer">0人作答 · 占比10%</div>
+                                    </div>
+                                    <div class="progress_panel clearfix right_answer">
+                                        <div class="panel_heading">选项 B</div>
+                                        <div class="panel_body">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel_footer">0人作答 · 占比10%</div>
+                                    </div>
+                                    <div class="progress_panel clearfix">
+                                        <div class="panel_heading">选项 C</div>
+                                        <div class="panel_body">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel_footer">0人作答 · 占比10%</div>
+                                    </div>
+                                    <div class="progress_panel clearfix">
+                                        <div class="panel_heading">选项 D</div>
+                                        <div class="panel_body">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel_footer">0人作答 · 占比10%</div>
+                                    </div>
+                                    <div class="progress_panel clearfix">
+                                        <div class="panel_heading">未作答</div>
+                                        <div class="panel_body">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel_footer">0人作答 · 占比10%</div>
+                                    </div>
+                                </div>
+
+                                <ul class="anwering_short">
+                                    <li>
+                                        <input type="checkbox" value="" id="1" />
+                                        <label for="1"></label>
+                                        马文慧
+                                    </li>
+                                    <li class="btn_success">
+                                        <input type="checkbox" value="" id="2" />
+                                        <label for="2"></label>
+                                        马文慧
+                                    </li>
+                                    <li class="btn_danger">
+                                        <input type="checkbox" value="" id="3" />
+                                        <label for="3"></label>
+                                        马文慧
+                                    </li>
+                                    <li class="btn_warning">
+                                        <input type="checkbox" value="" id="4" />
+                                        <label for="4"></label>
+                                        马文慧
+                                    </li>
+                                    <li class="btn_info">
+                                        <input type="checkbox" value="" id="5" />
+                                        <label for="5"></label>
+                                        马文慧
+                                    </li>
+                                    <li class="btn_contrast">对比答案</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

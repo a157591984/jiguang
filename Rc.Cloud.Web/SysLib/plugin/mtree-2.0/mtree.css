@@ -1,0 +1,45 @@
+ul,li{
+    list-style: none;
+}
+
+/*树状菜单*/
+
+.mtree li {
+    font-size: 0;
+}
+
+.mtree a {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    font-size: 14px;
+}
+
+.mtree a [data-name] {
+    min-height: 30px;
+    line-height: 30px;
+}
+
+.mtree a [data-name]:not([data-name="mtreeName"]) {
+    display: block;
+    float: left;
+    vertical-align: middle;
+}
+
+.mtree a [data-name="mtreeName"] {
+    display: block;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mtree a [data-name="mtreeBtn"] {
+    padding-right: 5px;
+    width: 24px;
+    text-align: right;
+}
+
+.mtree a.current {
+    background: #ccc;
+}

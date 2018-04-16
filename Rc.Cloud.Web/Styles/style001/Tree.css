@@ -1,0 +1,59 @@
+/**
+ * 树状菜单 默认样式
+ */
+.tree {
+	line-height: 20px;
+}
+
+.tree li {
+	padding-left: 10px;
+}
+
+.tree .name {
+	position: relative;
+}
+
+.tree .name .tree_btn {
+	width: 26px;
+	line-height: 36px;
+	text-align: center;
+	font-size: 14px;
+	display: inline-block;
+	float: left;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+}
+
+.tree .name .tree_btn:hover {
+}
+
+.tree .name a {
+	padding: 8px 0;
+	margin-left: 26px;
+	display: inline-block;
+}
+
+.tree .name:hover {
+	background: rgba(21,156,119,0.1);
+	color:#159C77;
+}
+.tree .name:hover a {
+	color:#159C77;
+}
+
+.tree .name.active {
+	background: #159C77;
+	color: #fff;
+}
+
+.tree .name.active a {
+	color: #fff;
+}
+.tree .name.active i{
+	color:#fff;
+}

@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>双向细目表组卷</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/highcharts/js/highcharts.js"></script>
+    <script src="../js/highcharts.config.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugin/mtree-2.0/mtree.js"></script>
+    <script>
+        $(function () {
+            $('.mtree-hook').mtree({
+                display: 2,
+                onClick: function (obj) {
+                }
+            });
+
+            //属性面板
+            $('.attr-dropdown-hook').on('click', function (e) {
+                var $DropdownMenu = $(this).next('.dropdown-menu-hook');
+                if ($DropdownMenu.is(':visible')) {
+                    $DropdownMenu.hide();
+                } else {
+                    $DropdownMenu.show();
+                }
+                e.preventDefault();
+                e.stopPropagation();
+            });
+            //关闭属性面板
+            $('.close-attr-dropdown-hook').on('click', function (e) {
+                $(this).closest('.dropdown-menu-hook').hide();
+            })
+
+            //双向细目表结构分析
+            $('.structural-hook').highcharts({
+                chart: {
+                    type: 'bar',
+                    backgroundColor: 'none',
+                    height: 300,
+                    marginTop: 60
+                },
+                title: {
+                    text: '双向细目表结构分析',
+                    align: 'left',
+                    y: 25,
+                    style: {
+                        'fontSize': '14px',
+                        'fontWeight': '700'
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            allowOverlap: true
+                        },
+                        pointWidth: 12,
+                    }
+                },
+                legend: {
+                    itemDistance: 26,
+                    verticalAlign: 'bottom',
+                    itemMarginTop: 5,
+                    margin: 0
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '选择题',
+                    data: [10]
+                }, {
+                    name: '填空题',
+                    data: [6]
+                }, {
+                    name: '解答题',
+                    data: [7]
+                }]
+            });
+            //难度分析
+            $('.difficulty-hook').highcharts({
+                chart: {
+                    type: 'pie',
+                    backgroundColor: 'none',
+                    height: 300,
+                    marginTop: 60
+                },
+                title: {
+                    text: '难度分析',
+                    align: 'left',
+                    y: 25,
+                    style: {
+                        'fontSize': '14px',
+                        'fontWeight': '700'
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    pie: {
+                        showInLegend: true
+                    }
+                },
+                legend: {
+                    itemDistance: 26,
+                    verticalAlign: 'bottom',
+                    itemMarginTop: 5,
+                    margin: 0
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    type: 'pie',
+                    data: [
+                        ['简单', 45.0],
+                        ['中等', 26.8],
+                        ['困难', 8.5]
+                    ]
+                }]
+            });
+            //知识点分析
+            $('.knowledge-hook').highcharts({
+                chart: {
+                    type: 'bar',
+                    backgroundColor: 'none',
+                    height: 300,
+                    marginTop: 60
+                },
+                title: {
+                    text: '知识点分析',
+                    align: 'left',
+                    y: 25,
+                    style: {
+                        'fontSize': '14px',
+                        'fontWeight': '700'
+                    }
+                },
+                exporting: {
+                    buttons: {
+                        contextButton: {
+                            enabled: false
+                        }
+                    }
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            allowOverlap: true
+                        },
+                        pointWidth: 12,
+                    }
+                },
+                legend: {
+                    itemDistance: 26,
+                    verticalAlign: 'bottom',
+                    itemMarginTop: 5,
+                    margin: 0
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '选择题',
+                    data: [10]
+                }, {
+                    name: '填空题',
+                    data: [6]
+                }, {
+                    name: '解答题',
+                    data: [7]
+                }]
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="iframe-header">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:;">我的空间</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="##">我的教案</a></li>
+                        <li class="active"><a href="##">布置作业</a></li>
+                        <li><a href="##">批改作业</a></li>
+                        <li><a href="##">集体备课</a></li>
+                        <li><a href="##">数据分析</a></li>
+                        <li><a href="##">讲评</a></li>
+                        <li><a href="##">购买教案/习题</a></li>
+                        <li><a href="##">班级管理</a></li>
+                        <li><a href="##">消息</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/download/Marking.exe">批改工具下载</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:;" data-toggle="dropdown"><i class="material-icons">&#xE853;</i>&nbsp;数学老师老师</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="##">个人中心</a></li>
+                                <li><a href="##">帮助</a></li>
+                                <li>
+                                    <a href="##">退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="iframe-subnav">
+        <ul class="subnav">
+            <li><a href="##">习题集</a></li>
+            <li><a href="##">自有习题集</a></li>
+            <li class="active dropdown">
+                <a href="javascript:;" data-toggle="dropdown">组卷<i class="material-icons">&#xE5C5;</i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ChapterAssembly.html">章节组卷</a></li>
+                    <li><a href="TwowayChecklistAssembly.html">双向细目表组卷</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" data-toggle="dropdown">已组试卷<i class="material-icons">&#xE5C5;</i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ChapterAssemblyPaper.html">章节组卷</a></li>
+                    <li><a href="TwowayChecklistAssemblyPaper.html">双向细目表组卷</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="iframe-container test_assembly">
+        <div class="iframe-sidebar">
+            <div class="dropdown selection_attr_dropdown">
+                <a href="javascript:;" class="attr-dropdown-hook">高中>人教版>必修1&nbsp;<i class="material-icons">&#xE5CF;</i></a>
+                <div class="dropdown-menu dropdown-menu-hook">
+                    <dl>
+                        <dt>年级学期</dt>
+                        <dd>
+                            <a href="javascript:;" class="active">高中</a>
+                            <a href="javascript:;">初中</a>
+                            <a href="javascript:;">小学</a>
+                        </dd>
+                        <dt>教材版本</dt>
+                        <dd>
+                            <a href="javascript:;" class="active">人教版</a>
+                            <a href="javascript:;">北师大版</a>
+                            <a href="javascript:;">苏教版</a>
+                            <a href="javascript:;">语文版</a>
+                            <a href="javascript:;">冀教版</a>
+                            <a href="javascript:;">鄂教版</a>
+                            <a href="javascript:;">鲁教版</a>
+                        </dd>
+                        <dt>课本</dt>
+                        <dd>
+                            <a href="javascript:;" class="active">必修1</a>
+                            <a href="javascript:;">必修2</a>
+                            <a href="javascript:;">必修3</a>
+                        </dd>
+                        <dt>类型</dt>
+                        <dd>
+                            <a href="javascript:;" class="active">期中</a>
+                            <a href="javascript:;">期末</a>
+                            <a href="javascript:;">中考</a>
+                            <a href="javascript:;">高考</a>
+                        </dd>
+                    </dl>
+                    <button type="button" class="btn btn-primary btn-sm close-attr-dropdown-hook">确定</button>
+                </div>
+            </div>
+            <div class="mtree mtree-hook">
+                <ul>
+                    <li>
+                        <div class="mtree_link mtree-link-hook">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">云双向细目表</div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省泰州中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省镇江中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省南通中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省淮安中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年广西贺州中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年广西桂林中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年浙江省温州中考数学试卷</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">我的双向细目表</div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省泰州中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省镇江中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省南通中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年江苏省淮安中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年广西贺州中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年广西桂林中考数学试卷</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">2017年浙江省温州中考数学试卷</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="iframe-main">
+            <div class="iframe-main-sidebar pv">
+                <div class="structural-hook"></div>
+                <div class="difficulty-hook"></div>
+                <div class="knowledge-hook"></div>
+            </div>
+            <div class="iframe-main-section pa">
+                <div class="text-right mb" id="btnTestpaper" style="display: block;">
+                    <button type="button" id="AddCustom" class="btn btn-primary">自定义双向细目表</button>
+                    <button type="button" id="UpdateCustom" class="btn btn-primary">修改双向细目表</button>
+                    <a href="CombinationTestPaper.html" class="btn btn-primary">开始组卷</a>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th width="60">题号</th>
+                            <th width="100">题型</th>
+                            <th>知识点</th>
+                            <th width="90">难易度</th>
+                            <th width="80">分值</th>
+                            <th width="80">试题数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>选择题</td>
+                            <td>
+                                集合的概念与表示
+                                <br>集合的基本运算（并集）
+                                <br>集合的基本运算（补集）
+                                <br>集合的基本运算（交集）
+                                <br>集合间的基本关系
+                                <br>
+                            </td>
+                            <td>简单</td>
+                            <td>3</td>
+                            <td>18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

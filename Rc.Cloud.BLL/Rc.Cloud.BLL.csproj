@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{300B7E79-3418-4C9C-BFBA-D44DEC01632C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Rc.Cloud.BLL</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_CustomVisitAttachment.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_DatabaseCopyLibrary.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_ExecutionHardware.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_ListStructure.cs" />
+    <Compile Include="Rc\BLL\Resources\CommonHandel.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_DictForHospital.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_Formulations_Dict.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_Execution.cs" />
+    <Compile Include="Rc\Cloud\BLL\DictionarySQlMaintenanceBLL.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_AudioVideoBook.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_AudioVideoIntro.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_BookArea.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_BookAttrbute.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_BookAttr_School.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_BookAudit.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_BookProductionLog.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Bookshelves.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_BookshelvesLog.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ChapterAssembly_TQ.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ClassPool.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ClientTab.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ClientTabToTab.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Common_Dict.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ConfigSchool.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_CustomizeHtml.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_DatabaseCopyLibrary.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_DictionarySQlMaintenance.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_DictRelation.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_DictRelation_Detail.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ExeccuteDataAnalysis.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_FileSyncExecRecord.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_FileSyncExecRecordDetail.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_FileSyncRecord.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_FileSyncRecordFail.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_F_User.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_F_User_Client.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_F_User_GradeTerm.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_f_user_token.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_GradeTermSubjectTeacherBooks.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_HelpCenter.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_HomeWork.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_HomeworkToTQ.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_HWScoreLevelDict.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_HW_TestPaper.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Msg.cs" />
+    <Compile Include="Rc\BLL\BLL_NoticeBoard.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_PrpeLesson.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_PrpeLesson_Person.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Regional_Dict.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_RelationPaperTemp.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Resource.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ResourceFolder.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ResourceShare.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ResourceToResourceFolder.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ResourceToResourceFolder_img.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_ResourceToResourceFolder_Property.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SchoolSMS.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SchoolSMS_Person.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SendMessageTemplate.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SendSMSRecord.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatRes_Doc.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatRes_Doc_Attr.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsAllActivity.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsAllMember.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_Corrected.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_CorrectedInData.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_KPInData.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_ScoreLevel.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_Subsection.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassHW_TQ.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsClassStudentHW_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeClassHW_Hierarchy.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeClassHW_TOPN.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeHW_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeHW_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeHW_ScoreLevel.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeHW_Subsection.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeHW_TQ.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsGradeStudentHW_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsHelper.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsLog.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsSchoolActivity.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsSchoolMember.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStudentHW_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStudentHW_KPInData.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_Analysis_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_Analysis_KP_Info.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_TQ_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_TQ_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_Wrong_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsStuHW_Wrong_TQ.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherClassHW_Hierarchy.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherHW_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherHW_KPInData.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherHW_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherHW_ScoreLevel.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherHW_Subsection.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherHW_TQ.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsTeacherStudentHW_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsVisitClient.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StatsVisitWeb.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_StudentToParent.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_HomeWork.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_HomeWorkAnswer.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_HomeWork_Correct.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_HomeWork_Submit.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_Mutual_Correct.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_Mutual_CorrectSub.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_Mutual_CorrectSub_Temp.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_Mutual_Correct_Temp.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Student_WrongHomeWork.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SyncData.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SyncFileToSchool.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SyncFileToSchoolData.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SyncFileToSchoolDataDetail.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SyncFileToSchoolDataDetail2.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysCode.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysDepartment.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysFilter.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysModule.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysModuleFunction.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysModuleFunctionRole.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysModuleFunctionUser.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysModuleHistory.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysRole.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SystemLog.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SystemLogError.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SystemLogFileSync.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysUser.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysUserRoleRelation.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysUserTask.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysUserTaskForderTree.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_SysUser_token.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Sys_Function.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_KnowledgePoint.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_KnowledgePointAttrExtend.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_KnowledgePointBasic.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_MeasureTarget.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_TestingPoint.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_TestingPointBasic.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_TestQuestions_KP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_S_TestQuestions_TP.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestPaper_Frame.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestPaper_FrameDetail.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestPaper_FrameDetailToTestQuestions.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestPaper_FrameDetailToTestQuestions_Attr.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestPaper_FrameToTestpaper.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TPIFUser.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TPSchoolIF.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklist.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistAudit.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistAuth.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistDetail.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistDetailToAttr.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistDetailToTestQuestions.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistToTeacher.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_Two_WayChecklistToTestpaper.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestQuestions.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestQuestions_Option.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_TestQuestions_Score.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_UserBuyResources.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_UserGroup.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_UserGroup_Member.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_UserOrder.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_UserOrder_Comment.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_visit_client.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_visit_client_s.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_visit_web.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_visit_web_s.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_VW_UserOnClassGradeSchool.cs" />
+    <Compile Include="Rc\BLL\Resources\BLL_VW_ClassGradeSchool.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_clsAuth.cs" />
+    <Compile Include="Rc\Cloud\BLL\Common_DictBLL.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_Common_DictNew.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_DictionarySQlMaintenance.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_Login.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_PublicClass.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysCode.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysConfigurationItems_Dict.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysDepartment.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysModule.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysModuleFunction.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysModuleFunctionRole.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysModuleFunctionUser.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysProduct.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysRole.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SystemLog.cs" />
+    <Compile Include="Rc\Cloud\BLL\SystemLogErrorBLL.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_SysUser.cs" />
+    <Compile Include="Rc\Cloud\BLL\SysUser_For_CustomerInfoBLL.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_Sys_Function.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_VSysUserRole.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_loginPath.cs" />
+    <Compile Include="Rc\Cloud\BLL\SysUserBLL.cs" />
+    <Compile Include="Rc\Cloud\BLL\BLL_F_User.cs" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rc.Cloud.DAL\Rc.Cloud.DAL.csproj">
+      <Project>{db2e14b1-4785-4e59-8f3d-0e62c13febde}</Project>
+      <Name>Rc.Cloud.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rc.Cloud.Model\Rc.Cloud.Model.csproj">
+      <Project>{0a691c87-7c2e-4268-bd45-228fa50718f8}</Project>
+      <Name>Rc.Cloud.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rc.Common\Rc.Common.csproj">
+      <Project>{2d4b851a-d494-4d67-9d41-5735d5daa3f2}</Project>
+      <Name>Rc.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

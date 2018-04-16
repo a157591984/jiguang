@@ -1,0 +1,46 @@
+﻿* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-size: 12px;
+	background: #fff;
+}
+
+.default_form_box {
+	padding: 20px;
+}
+
+.default_form_box dt {
+	width: 80px;
+	float: left;
+	padding-left: 20px;
+	line-height: 32px;
+	font-size: 13px;
+}
+
+.default_form_box dd {
+	margin-left: 100px;
+}
+
+.default_form_box .input_text {
+	height: 32px;
+	width: 60%;
+	margin-bottom: 10px;
+}
+
+.default_form_box .textarea {
+	width: 80%;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+.default_form_box .input_btn {
+	padding: 0 20px;
+	line-height: 32px;
+	border: none;
+	color: #fff;
+	background: #159C77;
+	border-radius: 2px;
+}

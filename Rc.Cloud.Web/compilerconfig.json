@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "css/style.css",
+    "inputFile": "less/style.less"
+  },
+  //{
+  //  "outputFile": "css/style-深蓝色.css",
+  //  "inputFile": "less/style.less"
+  //},
+  {
+    "outputFile": "SysLib/css/style.css",
+    "inputFile": "SysLib/less/style.less"
+  },
+  {
+    "outputFile": "plugin/layer/theme/bootstrap/css/style.css",
+    "inputFile": "plugin/layer/theme/bootstrap/css/style.less"
+  },
+  {
+    "outputFile": "plugin/mtree-2.0/mtree.css",
+    "inputFile": "plugin/mtree-2.0/mtree.less"
+  }
+]

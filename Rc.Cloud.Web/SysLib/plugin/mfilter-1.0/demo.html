@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="filter.css">
+</head>
+<body>
+    <div class="panel panel-default mfilter" data-name="mfilter">
+        <div class="mfilter_control" data-name="mfilterControl">
+            <div class="mfilter_header" data-name="mfilterHeader">年份</div>
+            <div class="mfilter_body" data-name="mfilterBody">
+                <div class="mfilter_item" data-name="mfilterItem">
+                    <a href="##" class="btn btn-primary btn-sm">全部</a>
+                    <a href="##">2017</a>
+                    <a href="##">2016</a>
+                    <a href="##">2015</a>
+                    <a href="##">2014</a>
+                    <a href="##">2013</a>
+                    <a href="##">2012</a>
+                    <a href="##">2011</a>
+                    <a href="##">2010</a>
+                </div>
+            </div>
+        </div>
+        <div class="mfilter_control" data-name="mfilterControl">
+            <div class="mfilter_header" data-name="mfilterHeader">学段</div>
+            <div class="mfilter_body" data-name="mfilterBody">
+                <div class="mfilter_item" data-name="mfilterItem">
+                    <a href="##" class="btn btn-primary btn-sm">全部</a>
+                    <a href="##">小学</a>
+                    <a href="##">初中</a>
+                    <a href="##">高中</a>
+                    <a href="##">中职</a>
+                    <a href="##">高职</a>
+                    <a href="##">学业测试</a>
+                    <a href="##">中考</a>
+                    <a href="##">中考</a>
+                </div>
+            </div>
+        </div>
+        <div class="mfilter_control" data-name="mfilterControl">
+            <div class="mfilter_header" data-name="mfilterHeader">学科</div>
+            <div class="mfilter_body" data-name="mfilterBody">
+                <div class="mfilter_item" data-name="mfilterItem">
+                    <a href="##" class="btn btn-primary btn-sm">全部</a>
+                    <a href="##">语文</a>
+                    <a href="##">数学</a>
+                    <a href="##">英语</a>
+                    <a href="##">政治</a>
+                    <a href="##">历史</a>
+                    <a href="##">地理</a>
+                    <a href="##">物理</a>
+                    <a href="##">生物</a>
+                    <a href="##">化学</a>
+                </div>
+            </div>
+        </div>
+        <div class="mfilter_control" data-name="mfilterControl">
+            <div class="mfilter_header" data-name="mfilterHeader">出版社</div>
+            <div class="mfilter_body" data-name="mfilterBody">
+                <div class="mfilter_item" data-name="mfilterItem">
+                    <a href="##" class="btn btn-primary btn-sm">全部</a>
+                    <a href="##">江苏科学技术出版社</a>
+                    <a href="##">山东教育出版社</a>
+                    <a href="##">牛津出版社</a>
+                    <a href="##">北京师范大学出版社</a>
+                    <a href="##">华东师范大学出版社</a>
+                    <a href="##">江苏教育出版社</a>
+                    <a href="##">浙江教育出版社</a>
+                    <a href="##">高等教育出版社</a>
+                    <a href="##">岳麓书社出版社</a>
+                    <a href="##">上海科学技术出版社</a>
+                </div>
+            </div>
+        </div>
+        <div class="search_bar">
+            <div class="search_bar_header"></div>
+            <div class="search_bar_body form-inline">
+                <select name="" class="form-control input-sm">
+                    <option value="">省</option>
+                </select>
+                <select name="" class="form-control input-sm">
+                    <option value="">市</option>
+                </select>
+                <input type="text" class="form-control input-sm" placeholder="名称">
+                <div class="input-group">
+                    <input type="text" class="form-control input-sm" placeholder="平均得分率≤">
+                    <div class="input-group-addon">%</div>
+                </div>
+                <button class="btn btn-primary btn-sm">搜索</button>
+            </div>
+        </div>
+    </div>
+
+<script src="../../js/jquery.min-1.11.1.js"></script>
+<script src="filter.js"></script>
+<script>
+    $(function () {
+        $('[data-name="mfilter"]').mfilter({
+            onClick: function (obj) {
+                //do something...
+            }
+        });
+    });
+</script>
+</body>
+</html>

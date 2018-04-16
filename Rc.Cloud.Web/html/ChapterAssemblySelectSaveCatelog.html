@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>保存到</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../plugin/layer/layer.js"></script>
+    <script src="../plugin/mtree-2.0/mtree.js"></script>
+    <script>
+        $(function () {
+            $('.mtree-hook').mtree({
+                html: true,
+                opera: true,
+                onClick: function (obj) {
+                    console.log(obj);
+                },
+                onAdd: function (obj, name) {
+                    console.log(name);
+                },
+                onDel: function (obj, data) {
+                    console.log(data);
+                },
+                onDone: function (obj, name, id, pid) {
+                    console.log(name);
+                    console.log(id);
+                    console.log(pid);
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="select_catelog_panel">
+        <div class="panel_body">
+            <div class="mtree mtree-hook">
+                <ul data-level="1">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="http://www.baidu.com" title="讲评" data-id="1">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">周测</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                        <ul data-level="2">
+                            <li>
+                                <div class="mtree_link mtree-link-hook" data-url="" title="云习题" data-id="7">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">云习题</div>
+                                    <div class="mtree_opera mtree-opera-hook">
+                                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook" data-url="" title="自有习题" data-id="8">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">自有习题</div>
+                                    <div class="mtree_opera mtree-opera-hook">
+                                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="布置作业" data-id="2">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">月测</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                        <ul data-level="2">
+                            <li>
+                                <div class="mtree_link mtree-link-hook" data-url="" title="云习题" data-id="7">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">云习题</div>
+                                    <div class="mtree_opera mtree-opera-hook">
+                                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook" data-url="" title="自有习题" data-id="8">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">自有习题</div>
+                                    <div class="mtree_opera mtree-opera-hook">
+                                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="批改作业" data-id="3">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">单元测</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                        <ul data-level="2">
+                            <li>
+                                <div class="mtree_link mtree-link-hook" data-url="" title="云习题" data-id="7">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">云习题</div>
+                                    <div class="mtree_opera mtree-opera-hook">
+                                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mtree_link mtree-link-hook" data-url="" title="自有习题" data-id="8">
+                                    <div class="mtree_indent mtree-indent-hook"></div>
+                                    <div class="mtree_btn mtree-btn-hook"></div>
+                                    <div class="mtree_name mtree-name-hook">自有习题</div>
+                                    <div class="mtree_opera mtree-opera-hook">
+                                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel_footer clearfix">
+            <!--<input type="text" name="name" value="" placeholder="试卷名称" class="form-control" />-->
+            <button type="button" class="btn btn-primary">保存</button>
+        </div>
+    </div>
+</body>
+</html>

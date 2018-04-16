@@ -1,0 +1,12 @@
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Debug\Rc.WebControls.xml
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Debug\Rc.WebControls.dll
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Debug\Rc.WebControls.pdb
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Debug\Rc.WebControls.csprojResolveAssemblyReference.cache
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Debug\Rc.WebControls.dll
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Debug\Rc.WebControls.pdb
+D:\work\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Debug\Rc.WebControls.xml
+D:\work\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Debug\Rc.WebControls.dll
+D:\work\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Debug\Rc.WebControls.pdb
+D:\work\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Debug\Rc.WebControls.csprojResolveAssemblyReference.cache
+D:\work\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Debug\Rc.WebControls.dll
+D:\work\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Debug\Rc.WebControls.pdb

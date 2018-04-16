@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB2E14B1-4785-4E59-8F3D-0E62C13FEBDE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Rc.Cloud.DAL</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Rc\Cloud\DAL\ListStructure.cs" />
+    <Compile Include="Rc\DAL\Resources\CommonHandel.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_DictForHospital.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_Formulations_Dict.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_V_Common_Dict.cs" />
+    <Compile Include="Rc\Cloud\DAL\DictionarySQlMaintenanceDAL.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_CustomVisitAttachment.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_DatabaseCopyLibrary.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_ExecutionHardware.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_AudioVideoBook.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_AudioVideoIntro.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_BookArea.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_BookAttrbute.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_BookAttr_School.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_BookAudit.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_BookProductionLog.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Bookshelves.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_BookshelvesLog.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ChapterAssembly_TQ.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ClientTab.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ClientTabToTab.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Common_Dict.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ConfigSchool.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_CustomizeHtml.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_DictRelation.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_DictRelation_Detail.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ExeccuteDataAnalysis.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_FileSyncExecRecord.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_FileSyncExecRecordDetail.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_FileSyncRecord.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_FileSyncRecordFail.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_F_User_Client.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_F_User_GradeTerm.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_f_user_token.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_GradeTermSubjectTeacherBooks.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ClassPool.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_DatabaseCopyLibrary.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_DictionarySQlMaintenance.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_F_User.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_HelpCenter.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_HomeWork.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_HomeworkToTQ.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_HWScoreLevelDict.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_HW_TestPaper.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Msg.cs" />
+    <Compile Include="Rc\DAL\DAL_NoticeBoard.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_PrpeLesson.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_PrpeLesson_Person.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Regional_Dict.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_RelationPaperTemp.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Resource.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ResourceFolder.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ResourceShare.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ResourceToResourceFolder.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ResourceToResourceFolder_img.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_ResourceToResourceFolder_Property.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SchoolSMS.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SchoolSMS_Person.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SendMessageTemplate.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SendSMSRecord.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatRes_Doc.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsAllActivity.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsAllMember.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_Corrected.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_CorrectedInData.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_KPInData.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_ScoreLevel.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_Subsection.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassHW_TQ.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsClassStudentHW_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeClassHW_Hierarchy.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeClassHW_TOPN.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeHW_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeHW_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeHW_ScoreLevel.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeHW_Subsection.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeHW_TQ.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsGradeStudentHW_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsHelper.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsLog.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsSchoolActivity.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsSchoolMember.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStudentHW_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStudentHW_KPInData.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_Analysis_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_Analysis_KP_Info.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_TQ_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_TQ_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_Wrong_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsStuHW_Wrong_TQ.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherClassHW_Hierarchy.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherHW_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherHW_KPInData.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherHW_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherHW_ScoreLevel.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherHW_Subsection.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherHW_TQ.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsTeacherStudentHW_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsVisitClient.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatsVisitWeb.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StudentToParent.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_HomeWork.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_HomeWorkAnswer.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_HomeWork_Correct.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_HomeWork_Submit.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_Mutual_Correct.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_Mutual_CorrectSub.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_Mutual_CorrectSub_Temp.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_Mutual_Correct_Temp.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Student_WrongHomeWork.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SyncData.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SyncFileToSchool.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SyncFileToSchoolData.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SyncFileToSchoolDataDetail.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SyncFileToSchoolDataDetail2.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysCode.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysDepartment.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysFilter.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysModule.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysModuleFunction.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysModuleFunctionRole.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysModuleFunctionUser.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysModuleHistory.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysRole.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SystemLog.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SystemLogError.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SystemLogFileSync.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysUser.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysUserRoleRelation.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysUserTask.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysUserTaskForderTree.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_SysUser_token.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Sys_Function.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_KnowledgePoint.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_KnowledgePointAttrExtend.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_KnowledgePointBasic.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_MeasureTarget.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_TestingPoint.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_TestingPointBasic.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_TestQuestions_KP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_S_TestQuestions_TP.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestPaper_Frame.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestPaper_FrameDetail.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestPaper_FrameDetailToTestQuestions.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestPaper_FrameDetailToTestQuestions_Attr.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestPaper_FrameToTestpaper.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TPIFUser.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TPSchoolIF.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistAudit.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistAuth.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistDetailToAttr.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistDetailToTestQuestions.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistToTeacher.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistToTestpaper.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestQuestions.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestQuestions_Option.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_TestQuestions_Score.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklist.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_Two_WayChecklistDetail.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_UserBuyResources.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_UserGroup.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_UserGroup_Member.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_StatRes_Doc_Attr.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_UserOrder.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_UserOrder_Comment.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_visit_client.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_visit_client_s.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_visit_web.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_visit_web_s.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_VW_ClassGradeSchool.cs" />
+    <Compile Include="Rc\DAL\Resources\DAL_VW_UserOnClassGradeSchool.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_clsAuth.cs" />
+    <Compile Include="Rc\Cloud\DAL\Common_DictDAL.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_Common_DictNew.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_DictionarySQlMaintenance.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_Login.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_PublicClass.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysCode.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysConfigurationItems_Dict.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysDepartment.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysModule.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysModuleFunction.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysModuleFunctionRole.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysModuleFunctionUser.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysProduct.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysRole.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SystemLog.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SystemLogError.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_SysUser.cs" />
+    <Compile Include="Rc\Cloud\DAL\SysUser_For_CustomerInfoDAL.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_Sys_Function.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_VSysUserRole.cs" />
+    <Compile Include="Rc\Cloud\DAL\SysUserDAL.cs" />
+    <Compile Include="Rc\Cloud\DAL\DAL_F_User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rc.Cloud.Model\Rc.Cloud.Model.csproj">
+      <Project>{0a691c87-7c2e-4268-bd45-228fa50718f8}</Project>
+      <Name>Rc.Cloud.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rc.Common\Rc.Common.csproj">
+      <Project>{2d4b851a-d494-4d67-9d41-5735d5daa3f2}</Project>
+      <Name>Rc.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

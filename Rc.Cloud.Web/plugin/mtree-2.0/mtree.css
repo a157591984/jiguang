@@ -1,0 +1,135 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+.mtree i {
+  font-style: normal;
+}
+.mtree ul {
+  display: none;
+}
+.mtree ul li {
+  font-size: 0;
+}
+.mtree ul li .mtree_nodata {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 6px;
+}
+.mtree ul li .mtree_link {
+  position: relative;
+  display: block;
+  box-sizing: content-box;
+  font-size: 14px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+.mtree ul li .mtree_link:not(.active):hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+.mtree ul li .mtree_link.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+.mtree ul li .mtree_link.active .mtree_name .mtree_edit_form .mtree_input_name,
+.mtree ul li .mtree_link.active .mtree_name .mtree_edit_form span {
+  border-color: #fff;
+}
+.mtree ul li .mtree_link .mtree_indent,
+.mtree ul li .mtree_link .mtree_btn,
+.mtree ul li .mtree_link .mtree_checkbox,
+.mtree ul li .mtree_link .mtree_icon,
+.mtree ul li .mtree_link .mtree_name,
+.mtree ul li .mtree_link .mtree_add,
+.mtree ul li .mtree_link .mtree_edit,
+.mtree ul li .mtree_link .mtree_del {
+  min-height: 24px;
+  line-height: 24px;
+  display: block;
+}
+.mtree ul li .mtree_link .mtree_indent:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_btn:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_checkbox:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_icon:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_name:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_add:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_edit:not(.mtree_name),
+.mtree ul li .mtree_link .mtree_del:not(.mtree_name) {
+  float: left;
+}
+.mtree ul li .mtree_link .mtree_btn,
+.mtree ul li .mtree_link .mtree_add,
+.mtree ul li .mtree_link .mtree_edit,
+.mtree ul li .mtree_link .mtree_del {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: normal;
+}
+.mtree ul li .mtree_link .mtree_btn > i.fa,
+.mtree ul li .mtree_link .mtree_add > i.fa,
+.mtree ul li .mtree_link .mtree_edit > i.fa,
+.mtree ul li .mtree_link .mtree_del > i.fa {
+  width: 100%;
+  height: 100%;
+  line-height: 24px;
+  text-align: center;
+  display: block;
+}
+.mtree ul li .mtree_link .mtree_btn > i.material-icons,
+.mtree ul li .mtree_link .mtree_add > i.material-icons,
+.mtree ul li .mtree_link .mtree_edit > i.material-icons,
+.mtree ul li .mtree_link .mtree_del > i.material-icons {
+  font-size: 18px;
+  padding: 3px;
+}
+.mtree ul li .mtree_link .mtree_checkbox {
+  width: 20px;
+  height: 24px;
+  display: none;
+}
+.mtree ul li .mtree_link .mtree_checkbox input[type="checkbox"] {
+  /*vertical-align: -2px;*/
+  margin-top: 6px;
+}
+.mtree ul li .mtree_link .mtree_name {
+  display: block;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+}
+.mtree ul li .mtree_link .mtree_name .mtree_form {
+  color: #333;
+}
+.mtree ul li .mtree_link .mtree_name .mtree_form .mtree_input_name {
+  height: 24px;
+  line-height: 22px;
+  padding: 1px 5px;
+  float: left;
+  width: 145px;
+}
+.mtree ul li .mtree_link .mtree_name .mtree_form span {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  display: inline-block;
+  background: #fff;
+  border: #ddd solid 1px;
+  float: left;
+  border-radius: 2px;
+  margin-left: 3px;
+}
+.mtree ul li .mtree_link .mtree_name .mtree_form span > i {
+  font-size: 18px;
+  vertical-align: top;
+}
+.mtree ul li .mtree_link .mtree_opera {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  display: none;
+}

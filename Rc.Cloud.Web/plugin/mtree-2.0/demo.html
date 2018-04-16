@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>树状菜单</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="../iconfont/material-icons.css" rel="stylesheet" />
+    <link href="mtree.css" rel="stylesheet" />
+</head>
+<body>
+    <!--<div class="mtree" data-name="sidebar"></div>
+
+    <hr />-->
+
+    <div class="mtree" data-name="sidebar" style="width:400px">
+        <ul data-level="1">
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="http://www.baidu.com" title="讲评" data-id="1">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">讲评</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="布置作业" data-id="2">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">布置作业</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+                <ul data-level="2">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="云习题" data-id="7">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">云习题</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="自有习题" data-id="8">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">自有习题</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="批改作业" data-id="3">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">批改作业</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="http://www.baidu.com" title="数据分析" data-id="4">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">数据分析</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+                <ul data-level="2">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="每次作业分析" data-id="9">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">每次作业分析</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="历次知识点分析" data-id="10">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">历次知识点分析</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="班级成长轨迹" data-id="11">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">班级成长轨迹</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="学生成长轨迹" data-id="12">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">学生成长轨迹</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="作业提交及批改情况" data-id="13">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">作业提交及批改情况</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="教案使用情况" data-id="14">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">教案使用情况</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="讲评报告使用情况" data-id="15">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">讲评报告使用情况</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="我的教案" data-id="16">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">我的教案</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="班级管理" data-id="17">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">班级管理</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="购买" data-id="18">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">购买</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+                <ul data-level="2">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="教案" data-id="5">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">教案</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="习题集" data-id="6">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">习题集</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <hr />
+    <div class="mtree" data-name="sidebar1" style="width:400px">
+        <ul data-level="1">
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="http://www.baidu.com" title="讲评" data-id="1">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">讲评</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="布置作业" data-id="2">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">布置作业</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+                <ul data-level="2">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="云习题" data-id="7">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">云习题</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="自有习题" data-id="8">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">自有习题</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="批改作业" data-id="3">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">批改作业</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="http://www.baidu.com" title="数据分析" data-id="4">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">数据分析</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+                <ul data-level="2">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="每次作业分析" data-id="9">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">每次作业分析</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="历次知识点分析" data-id="10">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">历次知识点分析</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="班级成长轨迹" data-id="11">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">班级成长轨迹</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="学生成长轨迹" data-id="12">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">学生成长轨迹</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="作业提交及批改情况" data-id="13">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">作业提交及批改情况</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="教案使用情况" data-id="14">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">教案使用情况</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="讲评报告使用情况" data-id="15">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">讲评报告使用情况</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="我的教案" data-id="16">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">我的教案</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="班级管理" data-id="17">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">班级管理</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="mtree_link mtree-link-hook" data-url="" title="购买" data-id="18">
+                    <div class="mtree_indent mtree-indent-hook"></div>
+                    <div class="mtree_btn mtree-btn-hook"></div>
+                    <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                    <div class="mtree_name mtree-name-hook">购买</div>
+                    <div class="mtree_opera mtree-opera-hook">
+                        <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                        <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                        <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                    </div>
+                </div>
+                <ul data-level="2">
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="教案" data-id="5">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">教案</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook" data-url="" title="习题集" data-id="6">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_checkbox mtree-checkbox-hook"><input type="checkbox" name="" value=""></div>
+                            <div class="mtree_name mtree-name-hook">习题集</div>
+                            <div class="mtree_opera mtree-opera-hook">
+                                <div class="mtree_add mtree-add-hook"><i class="material-icons">&#xE145;</i></div>
+                                <div class="mtree_edit mtree-edit-hook"><i class="material-icons">&#xE150;</i></div>
+                                <div class="mtree_del mtree-del-hook"><i class="material-icons">&#xE872;</i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="../../js/jquery.min-1.11.1.js"></script>
+    <script src="mtree.js"></script>
+    <script>
+        $(function () {
+            //侧边栏开始
+
+            //方案1，传data自动生成dom
+            //$('[data-name="sidebar"]').mtree({
+            //    openIcon: '<i class="fa fa-caret-down"></i>',
+            //    closeIcon: '<i class="fa fa-caret-up"></i>',
+            //    data: [
+            //        {
+            //            'id': '1',
+            //            'pid': '0',
+            //            'name': '讲评',
+            //            'url': 'http://www.baidu.com',
+            //            'icon': '<i class="fa fa-bookmark"></i>',
+            //            'expand': ''
+            //        },
+            //        { 'id': '2', 'pid': '0', 'name': '布置作业', 'url': '', 'icon': '<i class="fa fa-book"></i>', 'expand': '' },
+            //        { 'id': '7', 'pid': '2', 'name': '云习题', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '8', 'pid': '2', 'name': '自有习题', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '3', 'pid': '0', 'name': '批改作业', 'url': '', 'icon': '<i class="fa fa-pencil"></i>', 'expand': '' },
+            //        { 'id': '4', 'pid': '0', 'name': '数据分析', 'url': '', 'icon': '<i class="fa fa-cubes"></i>', 'expand': '' },
+            //        { 'id': '9', 'pid': '4', 'name': '每次作业分析', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '10', 'pid': '4', 'name': '历次知识点分析', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '11', 'pid': '4', 'name': '班级成长轨迹', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '12', 'pid': '4', 'name': '学生成长轨迹', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '13', 'pid': '4', 'name': '作业提交及批改情况', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '14', 'pid': '4', 'name': '教案使用情况', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '15', 'pid': '4', 'name': '讲评报告使用情况', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '16', 'pid': '0', 'name': '我的教案', 'url': '', 'icon': '<i class="fa fa-briefcase"></i>', 'expand': '' },
+            //        { 'id': '17', 'pid': '0', 'name': '班级管理', 'url': '', 'icon': '<i class="fa fa-users"></i>', 'expand': '' },
+            //        { 'id': '18', 'pid': '0', 'name': '购买', 'url': '', 'icon': '<i class="fa fa-shopping-cart"></i>', 'expand': '' },
+            //        { 'id': '5', 'pid': '18', 'name': '教案', 'url': '', 'icon': '', 'expand': '' },
+            //        { 'id': '6', 'pid': '18', 'name': '习题集', 'url': '', 'icon': '', 'expand': '' }
+            //    ],
+            //    onClick: function (obj) {
+            //        //window.open(obj.data('url'));
+            //        console.log(obj.data('id'));
+            //    }
+            //});
+
+            //方案-2 不传data，直接操作demo
+            $('[data-name="sidebar"]').mtree({
+                openIcon: '<i class="material-icons">&#xE146;</i>',
+                closeIcon: '<i class="material-icons">&#xE909;</i>',
+                html: true,
+                checkbox: true,
+                opera: true,
+                onClick: function (obj) {
+                    //window.open(obj.data('url'));
+                    console.log(obj);
+                },
+                onAdd: function (obj, name) {
+                    console.log(name);
+                },
+                onDel: function (obj, data) {
+                    console.log(data);
+                },
+                onDone: function (obj, name, id) {
+                    console.log(obj);
+                    console.log(name);
+                    console.log(id);
+                }
+            });
+            $('[data-name="sidebar1"]').mtree({
+                openIcon: '<i class="material-icons">&#xE146;</i>',
+                closeIcon: '<i class="material-icons">&#xE909;</i>',
+                html: true,
+                checkbox: true,
+                opera: true,
+                onClick: function (obj) {
+                    //window.open(obj.data('url'));
+                    console.log(obj);
+                },
+                onAdd: function (obj, name) {
+                    console.log(name);
+                },
+                onDel: function (obj, data) {
+                    console.log(data);
+                },
+                onDone: function (obj, name, id) {
+                    console.log(obj);
+                    console.log(name);
+                    console.log(id);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

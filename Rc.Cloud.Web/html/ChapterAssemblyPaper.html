@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>章节组卷</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugin/mtree-2.0/mtree.js"></script>
+    <script>
+        $(function () {
+            $('.mtree-hook').mtree({
+                url: true,
+                display: 1,
+                onClick: function (obj) {
+                }
+            });
+            $('.mtree1-hook').mtree({
+                display: 1,
+                onClick: function (obj) {
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="iframe-header">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:;">我的空间</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="##">我的教案</a></li>
+                        <li class="active"><a href="##">布置作业</a></li>
+                        <li><a href="##">批改作业</a></li>
+                        <li><a href="##">集体备课</a></li>
+                        <li><a href="##">数据分析</a></li>
+                        <li><a href="##">讲评</a></li>
+                        <li><a href="##">购买教案/习题</a></li>
+                        <li><a href="##">班级管理</a></li>
+                        <li><a href="##">消息</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/download/Marking.exe">批改工具下载</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:;" data-toggle="dropdown"><i class="material-icons">&#xE853;</i>&nbsp;数学老师老师</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="##">个人中心</a></li>
+                                <li><a href="##">帮助</a></li>
+                                <li>
+                                    <a href="##">退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="iframe-subnav">
+        <ul class="subnav">
+            <li><a href="##">习题集</a></li>
+            <li><a href="##">自有习题集</a></li>
+            <li class="dropdown">
+                <a href="javascript:;" data-toggle="dropdown">组卷<i class="material-icons">&#xE5C5;</i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ChapterAssembly.html">章节组卷</a></li>
+                    <li><a href="TwowayChecklistAssembly.html">双向细目表组卷</a></li>
+                </ul>
+            </li>
+            <li class="active dropdown">
+                <a href="javascript:;" data-toggle="dropdown">已组试卷<i class="material-icons">&#xE5C5;</i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="ChapterAssemblyPaper.html">章节组卷</a></li>
+                    <li><a href="TwowayChecklistAssemblyPaper.html">双向细目表组卷</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="iframe-container test_assembly">
+        <div class="iframe-sidebar">
+            <div class="mtree mtree-hook">
+                <ul data-level="1">
+                    <li>
+                        <div class="mtree_link mtree-link-hook active">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">高一一班</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">高一二班</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">高一三班</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">高一四班</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mtree_link mtree-link-hook">
+                            <div class="mtree_indent mtree-indent-hook"></div>
+                            <div class="mtree_btn mtree-btn-hook"></div>
+                            <div class="mtree_name mtree-name-hook">高一五班</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="iframe-main">
+            <div class="iframe-main-sidebar">
+                <div class="page_title pv">目录</div>
+                <div class="mtree mtree1-hook">
+                    <ul data-level="1">
+                        <li>
+                            <div class="mtree_link mtree-link-hook">
+                                <div class="mtree_indent mtree-indent-hook"></div>
+                                <div class="mtree_btn mtree-btn-hook"></div>
+                                <div class="mtree_name mtree-name-hook">周测</div>
+                            </div>
+                            <ul data-level="2">
+                                <li>
+                                    <div class="mtree_link mtree-link-hook active">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹1</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mtree_link mtree-link-hook">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹2</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="mtree_link mtree-link-hook">
+                                <div class="mtree_indent mtree-indent-hook"></div>
+                                <div class="mtree_btn mtree-btn-hook"></div>
+                                <div class="mtree_name mtree-name-hook">月测</div>
+                            </div>
+                            <ul data-level="2">
+                                <li>
+                                    <div class="mtree_link mtree-link-hook">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹3</div>
+                                        </a>
+                                </li>
+                                <li>
+                                    <div class="mtree_link mtree-link-hook">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹4</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="mtree_link mtree-link-hook">
+                                <div class="mtree_indent mtree-indent-hook"></div>
+                                <div class="mtree_btn mtree-btn-hook"></div>
+                                <div class="mtree_name mtree-name-hook">单元测</div>
+                            </div>
+                            <ul data-level="2">
+                                <li>
+                                    <div class="mtree_link mtree-link-hook">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹5</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mtree_link mtree-link-hook">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹6</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mtree_link mtree-link-hook">
+                                        <div class="mtree_indent mtree-indent-hook"></div>
+                                        <div class="mtree_btn mtree-btn-hook"></div>
+                                        <div class="mtree_name mtree-name-hook">新建文件夹7</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="iframe-main-section pa">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th width="150">时间</th>
+                            <th width="250">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbRes">
+                        <tr>
+                            <td>模拟卷一</td>
+                            <td>2017-12-19 20:24</td>
+                            <td>
+                                <a href="##">预览</a>
+                                <a href="##">布置</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination_container">
+                    <ul class="pagination">
+                        <li class="active current home"><a href="javascript:void(0);">首页</a></li>
+                        <li class="active current prev"><a href="javascript:void(0);">上一页</a></li>
+                        <li class="active current"><a href="javascript:void(0);">1</a></li>
+                        <li class="active current next"><a href="javascript:void(0);">下一页</a></li>
+                        <li class="active current home"><a href="javascript:void(0);">尾页</a></li>
+                        <li class="active current home"><a href="javascript:void(0);">页码:1/1</a></li>
+                        <li class="active"><a>共1条，每页显示&nbsp;&nbsp;<select data-name="pagination_select" name="pagination_select" class="pagination_select" onchange="pageselectCallback(0);"><option value="5">5</option><option value="10" selected="">10</option><option value="12">12</option><option value="15">15</option><option value="20">20</option><option value="30">30</option><option value="50">50</option><option value="75">75</option><option value="100">100</option></select></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

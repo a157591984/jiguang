@@ -1,0 +1,1524 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rc.WebControls</name>
+    </assembly>
+    <members>
+        <member name="T:Rc.WebControls.ClientScriptRersource">
+            <summary>
+            自定义的脚本资源
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ClientScriptRersource.OnPreRender(System.EventArgs)">
+            <summary>
+            改写onprerender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.ClientScriptRersource.IsIncludeJqueryScript">
+            <summary>
+            是否包含Jquery脚本
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.Button">
+            <summary>
+            提交按钮
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.Button.#ctor">
+            <summary>
+            出发数据验证功能
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.Button.OnPreRender(System.EventArgs)">
+            <summary>
+            输出之前
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.Button.PromptMessage">
+            <summary>
+            点击按钮时的提示文本
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.Button.IsOnlyShowFirstError">
+            <summary>
+            在点击按钮时，如果显示方式为alert，那么是否只显示第一条错误
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.Button.TargetControlID">
+            <summary>
+            本按钮出发的验证控件的范围，如果指定，只检查控件的内部控件
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.ButtonRefresh">
+            <summary>
+            数字文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ButtonRefresh.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ButtonRefresh.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Render
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ButtonRefresh.Text">
+            <summary>
+            设置按钮上面显示的文本
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ButtonRefresh.Enabled">
+            <summary>
+            控件是否可用
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.LinkButton">
+            <summary>
+            确认链接按钮
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.LinkButton.#ctor">
+            <summary>
+            出发数据验证功能
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.LinkButton.OnPreRender(System.EventArgs)">
+            <summary>
+            输出之前
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.LinkButton.PromptMessage">
+            <summary>
+            点击按钮时的提示文本
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.LinkButton.IsOnlyShowFirstError">
+            <summary>
+            在点击按钮时，如果显示方式为alert，那么是否只显示第一条错误
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.LinkButton.TargetControlID">
+            <summary>
+            本按钮出发的验证控件的范围，如果指定，只检查控件的内部控件
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.ShowErrorTypes">
+            <summary>
+            数据验证错误信息提示方式
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.ShowErrorTypes.Inline">
+            <summary>
+            行内显示
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.ShowErrorTypes.Alert">
+            <summary>
+            弹出窗口
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.ShowErrorTypes.All">
+            <summary>
+            同时显示
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.RepeaterPaddingBar">
+            <summary>
+            自定义的Repeater
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RepeaterPaddingBar.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RepeaterPaddingBar.OnChangePageIndex(System.Object,System.EventArgs)">
+            <summary>
+            用户登录时触发此事件
+            </summary>
+            <param name="e">参数</param>
+            <param name="sender">控件</param>
+        </member>
+        <member name="M:Rc.WebControls.RepeaterPaddingBar.OnBubbleEvent(System.Object,System.EventArgs)">
+            <summary>
+            事件冒泡
+            </summary>
+            <param name="source">控件</param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.RepeaterPaddingBar.CreateChildControls">
+            <summary>
+            创建子控件方法
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RepeaterPaddingBar.PageSize">
+            <summary>
+            每页记录的数量
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RepeaterPaddingBar.PageIndex">
+            <summary>
+            设置或设置当前的页码
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RepeaterPaddingBar.RecordCount">
+            <summary>
+            设置或获取符合条件的记录数量
+            </summary>
+        </member>
+        <member name="E:Rc.WebControls.RepeaterPaddingBar.ChangePageIndex">
+            <summary>当栏目树选择的节点发生改变</summary>
+        </member>
+        <member name="P:Rc.WebControls.RepeaterPaddingBar.TagKey">
+            <summary>
+            默认顶顶级Tag类型
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBox">
+            <summary>
+            普通文本框控件
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBox.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBox._allowKeyPressCodes">
+            <summary>
+            允许输入按键值
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBox._prohibitionKeyPressCodes">
+            <summary>
+            禁止按键的值
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBox.OnPreRender(System.EventArgs)">
+            <summary>
+            改写OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rc.WebControls.TextBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rc.WebControls.TextBox.DataValid">
+            <summary>
+            验证数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.IsRequired">
+            <summary>
+            是否为必填控件
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.MinLength">
+            <summary>
+            控件需要填入的最少字符数
+            </summary>		
+        </member>
+        <member name="P:Rc.WebControls.TextBox.ShowErrorType">
+            <summary>
+            数据错误验证错误信息提示方式
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.WatermarkText">
+            <summary>
+            在用户没有在文本框中输入内容时的提示文本
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.ValidationExpression">
+            <summary>
+            自定义的验证正则表达式
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.IsFilterSqlChars">
+            <summary>
+            是否过滤SQL特殊字符
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.IsFilterSpecialChars">
+            <summary>
+            是否过滤指定的特殊字符
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.RequiredErrorMessage">
+            <summary>
+            必填错误提示信息
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.FormatErrorMessage">
+            <summary>
+            格式错误提示信息
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBox.IsValid">
+            <summary>
+            控件数据是否通过验证
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxDate">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxDate.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxDate.OnPreRender(System.EventArgs)">
+            <summary>
+            OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxDate.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDate.TextBoxDateShowType">
+            <summary>
+            日历控件日期显示类型，按日，还是按月
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDate.MinValue">
+            <summary>
+            最大日期范围
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDate.MaxValue">
+            <summary>
+            最小日期范围
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDate.MaxDateControlId">
+            <summary>
+            当前控件能够选择最大日期对应控件ID
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDate.MinDateControlId">
+            <summary>
+            当前控件能够选择最小日期对应控件ID
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDate.TextDate">
+            <summary>
+            设置或获取日期的值
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxDate.TextBoxDateShowTypes">
+            <summary>
+            日历控件日期显示类型枚举
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBoxDate.TextBoxDateShowTypes.Day">
+            <summary>
+            按日选择
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBoxDate.TextBoxDateShowTypes.Month">
+            <summary>
+            按月选择
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBoxDate.TextBoxDateShowTypes.Year">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxDouble">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxDouble.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxDouble.OnPreRender(System.EventArgs)">
+            <summary>
+            OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDouble.MaxValue">
+            <summary>
+            可以录入的最大值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDouble.MinValue">
+            <summary>
+            可以录入的最小值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDouble.DecimalDigits">
+            <summary>
+            最少小数位数
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxDouble.TextDouble">
+            <summary>
+            当前控件的整数值
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxDoubleGreaterZero">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxDoubleGreaterZero.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxEmail">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxEmail.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxIDCard">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxIDCard.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxInt">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxInt.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxInt.OnLoad(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxInt.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxInt.MaxValue">
+            <summary>
+            可以录入的最大值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxInt.MinValue">
+            <summary>
+            可以录入的最小值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxInt.TextInt">
+            <summary>
+            当前控件的整数值
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxIntGreaterZero">
+            <summary>
+            正整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxIntGreaterZero.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxNoSpace">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxNoSpace.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxPassword">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxPassword.OnLoad(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxPassword.PasswordText">
+            <summary>
+            获取经过SHA密码后的密码文本
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxPhone">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxPhone.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxPhone.OnPreRender(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxPhone.PhoneType">
+            <summary>
+            电话类型
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxPhone.PhoneTypes">
+            <summary>
+            电话类型枚举
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBoxPhone.PhoneTypes.FixedPhone">
+            <summary>
+            固定电话
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBoxPhone.PhoneTypes.MobilePhone">
+            <summary>
+            移动电话
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TextBoxPhone.PhoneTypes.All">
+            <summary>
+            所有电话格式
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxPostCode">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxPostCode.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TextBoxUrl">
+            <summary>
+            整数文本框
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TextBoxUrl.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TextBoxUrl.UriKind">
+            <summary>
+            URL的模式
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.CheckBoxList">
+            <summary>
+            自定义的CheckBoxList
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.IDataBindControls">
+            <summary>
+            所有数据绑定控件的默认接口
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.IDataBindControls.ReLoadItem">
+            <summary>
+            清空并重新加载数据项
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.CheckBoxList.IS_ADDED_LIST_ITEM">
+            <summary>
+            是否已经添加过项目，因为可能用户会强制刷新控件，这个开关防止重复添加。
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.CheckBoxList.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.CheckBoxList.CreateChildControls">
+            <summary>
+            创建子控件方法
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.CheckBoxList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rc.WebControls.CheckBoxList.AddDropDownItem">
+            <summary>
+            添加子项目
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.CheckBoxList.ReLoadItem">
+            <summary>
+            重新加载列表项
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.CheckBoxList.DataValid">
+            <summary>
+            验证数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.CheckBoxList.IsRequired">
+            <summary>
+            该控件是否必须选择项目
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.CheckBoxList.ShowErrorType">
+            <summary>
+            数据错误验证错误信息提示方式
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.CheckBoxList.RequiredErrorMessage">
+            <summary>
+            没有选择任何项目是的错误信息
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.CheckBoxList.SelectedGuidValue">
+            <summary>
+            获取选则项目GUID值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.CheckBoxList.IsValid">
+            <summary>
+            控件数据是否通过验证
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.DropDownList">
+            <summary>
+            自定义的DrugDownList
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.DropDownList.IS_ADDED_LIST_ITEM">
+            <summary>
+            是否已经添加过项目，因为可能用户会强制刷新控件，这个开关防止重复添加。
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.DropDownList.#ctor">
+            <summary>
+            默认的构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.DropDownList.CreateChildControls">
+            <summary>
+            创建子控件方法
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.DropDownList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rc.WebControls.DropDownList.AddDropDownItem">
+            <summary>
+            添加子项目
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.DropDownList.ReLoadItem">
+            <summary>
+            重新加载列表项
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.DropDownList.DataValid">
+            <summary>
+            验证数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.EmptyItemText">
+            <summary>
+            空白项目的名称
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.EmptyItemType">
+            <summary>
+            设置或获取空白数据项目的类型
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.IsRequired">
+            <summary>
+            该控件是否必须选择项目
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.IsAddEmptyItem">
+            <summary>
+            是否在最前面添加空白项目
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.RequiredErrorMessage">
+            <summary>
+            没有选择任何项目是的错误信息
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.ShowErrorType">
+            <summary>
+            数据错误验证错误信息提示方式
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.SelectedGuidValue">
+            <summary>
+            获取选则项目GUID值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.SelectedValue">
+            <summary>
+            设置或获取选中项目的值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.SelectedItem">
+            <summary>
+            获取当前选中项
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.SelectedIndex">
+            <summary>
+            设置或获取选中项目索引
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownList.IsValid">
+            <summary>
+            控件数据是否通过验证
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.ListBox">
+            <summary>
+            自定义的ListBox
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.ListBox.IS_ADDED_LIST_ITEM">
+            <summary>
+            是否已经添加过项目，因为可能用户会强制刷新控件，这个开关防止重复添加。
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ListBox.#ctor">
+            <summary>
+            默认的构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ListBox.CreateChildControls">
+            <summary>
+            创建子控件方法
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ListBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rc.WebControls.ListBox.AddDropDownItem">
+            <summary>
+            添加子项目
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ListBox.ReLoadItem">
+            <summary>
+            重新加载列表项
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ListBox.DataValid">
+            <summary>
+            验证数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.EmptyItemText">
+            <summary>
+            空白项目的名称
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.EmptyItemType">
+            <summary>
+            设置或获取空白数据项目的类型
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.IsRequired">
+            <summary>
+            该控件是否必须选择项目
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.IsAddEmptyItem">
+            <summary>
+            是否在最前面添加空白项目
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.RequiredErrorMessage">
+            <summary>
+            没有选择任何项目是的错误信息
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.ShowErrorType">
+            <summary>
+            数据错误验证错误信息提示方式
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.SelectedGuidValue">
+            <summary>
+            获取选则项目GUID值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.SelectedValue">
+            <summary>
+            设置或获取选中项目的值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.SelectedItem">
+            <summary>
+            获取当前选中项
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.SelectedIndex">
+            <summary>
+            设置或获取选中项目索引
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.ListBox.IsValid">
+            <summary>
+            控件数据是否通过验证
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.RadioButtonList">
+            <summary>
+            自定义的RadioButtonList
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.RadioButtonList.IS_ADDED_LIST_ITEM">
+            <summary>
+            是否已经添加过项目，因为可能用户会强制刷新控件，这个开关防止重复添加。
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RadioButtonList.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RadioButtonList.CreateChildControls">
+            <summary>
+            创建子控件方法
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RadioButtonList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rc.WebControls.RadioButtonList.AddDropDownItem">
+            <summary>
+            添加子项目
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RadioButtonList.ReLoadItem">
+            <summary>
+            重新加载列表项
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.RadioButtonList.DataValid">
+            <summary>
+            验证数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.RadioButtonList.IsRequired">
+            <summary>
+            该控件是否必须选择项目
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RadioButtonList.RequiredErrorMessage">
+            <summary>
+            没有选择任何项目是的错误信息
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RadioButtonList.ShowErrorType">
+            <summary>
+            数据错误验证错误信息提示方式
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RadioButtonList.SelectedGuidValue">
+            <summary>
+            获取选则项目GUID值
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.RadioButtonList.IsValid">
+            <summary>
+            控件数据是否通过验证
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.DropDownListByTreeModel">
+            <summary>
+            用DropDownList显示树状数据
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.DropDownListByTreeModel.AddDropDownItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownListByTreeModel.ItemsSources">
+            <summary>
+            设置或获取当前数据源的集合
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownListByTreeModel.IsEnableSelectParenNode">
+            <summary>
+            是否允许选择父节点
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.DropDownListByTreeModel.FielterNodeValue">
+            <summary>
+            过滤的节点ID，如果设置了，只有本节点的下级几点才会显示
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TreeNodeInfo">
+            <summary>
+            数形数据节点实体类
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TreeNodeInfo.NodeID">
+            <summary>
+            节点ID
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TreeNodeInfo.ParentNodeID">
+            <summary>
+            当前节点的上级节点ID
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TreeNodeInfo.NodeName">
+            <summary>
+            当前节点的名称
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TreeNodeInfo.Priority">
+            <summary>
+            节点的优先级
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.TreeView">
+            <summary>
+            自定义的TreeView
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.TreeView.IS_ADDED_LIST_ITEM">
+            <summary>
+            是否已经添加过项目，因为可能用户会强制刷新控件，这个开关防止重复添加。
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TreeView.OnPreRender(System.EventArgs)">
+            <summary>
+            OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rc.WebControls.TreeView.AddNodeItem">
+            <summary>
+            添加树节点
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TreeView.ReLoadItem">
+            <summary>
+            重新加载列表项
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.TreeView.GetAllNodes">
+            <summary>
+            获取树的所有节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.TreeView.ItemsSources">
+            <summary>
+            设置或获取当前数据源的集合
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TreeView.JavaScriptForm">
+            <summary>
+            在树节点被点击时被触发的脚本格式字符串
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.TreeView.FielterNodeValue">
+            <summary>
+            过滤的节点ID，如果设置了，只有本节点的下级几点才会显示
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.BasePage">
+            <summary>
+            所有页面的基类
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ShowAutoCloseAlert(System.String,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            用户显示一个弹出提示框
+            </summary>
+            <param name="message">要显示的信息</param>
+            <param name="millisec">提示停留的时间</param>
+            <param name="dialogTop">距离顶部的距离</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ShowAlert(System.String)">
+            <summary>
+            用户显示一个弹出提示框
+            </summary>
+            <param name="message">要显示的信息</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ShowAlert(System.String,System.Int32,System.Int32)">
+            <summary>
+            用户显示一个弹出提示框
+            </summary>
+            <param name="message">要显示的信息</param>
+            <param name="dialogTop">对话框距离顶部的距离</param>
+            <param name="dialogWidth">对话框的宽度</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ShowAlert(System.String,System.Boolean)">
+            <summary>
+            用户显示一个弹出提示框
+            </summary>
+            <param name="message">要显示的信息</param>
+            <param name="blnCloseWindows">是否显示完信息后关闭窗口</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ShowAlert(System.String,System.String)">
+            <summary>
+            用户显示一个弹出提示框
+            </summary>
+            <param name="message">要显示的信息</param>
+            <param name="newUrl">显示完提示信息后跳转到那个页面</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ReturnPrePage">
+            <summary>
+            返回请求的页面
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.GetShowModalDialogString(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取显示模态对话框的代码
+            </summary>
+            <param name="strUrl">需要打开的页面Url</param>
+            <param name="width">对话框的宽度</param>
+            <param name="height">对话框的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.GetShowModalDialogString(System.String)">
+            <summary>
+            获取显示模态对话框的代码
+            </summary>
+            <param name="strUrl">需要打开的页面Url</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.GetShowModelessDialogString(System.String,System.Int32,System.Int32)">
+            <summary>
+            获取显示非模态对话框的代码
+            </summary>
+            <param name="strUrl">需要打开的页面Url</param>
+            <param name="width">对话框的宽度</param>
+            <param name="height">对话框的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.GetShowModelessDialogString(System.String)">
+            <summary>
+            获取显示非模态对话框的代码
+            </summary>
+            <param name="strUrl">需要打开的页面Url</param>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.ReLoadPage">
+            <summary>
+            重新加载页面
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.BasePage.RegisterStartupScript(System.String)">
+            <summary>
+            注册页面头部脚本块
+            </summary>
+            <param name="strScript"></param>
+        </member>
+        <member name="T:Rc.WebControls.CheckCodeHandler">
+            <summary>
+            生成验证码图片
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.CheckCodeHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            根据请求返回需要的验证码图片
+            </summary>
+            <param name="context">httpContext对象</param>
+        </member>
+        <member name="M:Rc.WebControls.CheckCodeHandler.GetCheckCode">
+            <summary>
+            生成随机的字母
+            </summary>
+            <returns>验证码</returns>
+        </member>
+        <member name="P:Rc.WebControls.CheckCodeHandler.IsReusable">
+            <summary>
+            指示其他请求是否可以使用 IHttpHandler 实例
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.ImageVerificationCode">
+            <summary>
+            验证码控件
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.ImageVerificationCode.LOGIN_COOKIE_NAME">
+            <summary>验证登陆的COOKIE名称</summary>
+        </member>
+        <member name="F:Rc.WebControls.ImageVerificationCode.REGISTER_COOKIE_NAME">
+            <summary>验证注册的COOKIE名称</summary>
+        </member>
+        <member name="F:Rc.WebControls.ImageVerificationCode.OTHER_COOKIE_NAME">
+            <summary>通用的验证COOKIE名称</summary>
+        </member>
+        <member name="M:Rc.WebControls.ImageVerificationCode.#ctor">
+            <summary>
+            默认的构造函数
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.ImageVerificationCode.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Rc.WebControls.ImageVerificationCode.IsValid(System.String)">
+            <summary>
+            检查用户登陆输入的验证码是否有效
+            </summary>
+            <param name="checkCode">用户输入的验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.ImageVerificationCode.IsLoginValid(System.Web.UI.Page,System.String)">
+            <summary>
+            检查用户登陆输入的验证码是否有效
+            </summary>
+            <param name="page">控件所属页面的实例</param>
+            <param name="checkCode">用户输入的验证码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.ImageVerificationCode.IsRegisterValid(System.Web.UI.Page,System.String)">
+            <summary>
+            检查用户注册输入的验证码是否有效
+            </summary>
+            <param name="page">控件所属页面的实例</param>
+            <param name="checkCode">用户输入的验证码</param>
+            <returns></returns>
+        </member>
+        <member name="P:Rc.WebControls.ImageVerificationCode.VerificationCodeType">
+            <summary>
+            设置或获取验证码的类型
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.VerificationCodeTypes">
+            <summary>
+            校验码类型，因为一个页面中可能存在多个验证码，需要做出区分
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.VerificationCodeTypes.Login">
+            <summary>
+            登录验证码
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.VerificationCodeTypes.Regist">
+            <summary>
+            注册验证码
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.VerificationCodeTypes.Other">
+            <summary>
+            其他验证码
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.EmptyItemTypes">
+            <summary>
+            控件空白项目的类型
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.EmptyItemTypes.Choice">
+            <summary>
+            请选择0
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.EmptyItemTypes.All">
+            <summary>
+            全选 1
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.UploadFileTypes">
+            <summary>
+            上传文件类型
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.UploadFileTypes.Image">
+            <summary>
+            图片文件1
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.UploadFileTypes.File">
+            <summary>
+            office文件2
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.UploadFileTypes.Media">
+            <summary>
+            视频文件3
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.UploadFileTypes.Flash">
+            <summary>
+            flash文件4
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.HttpHandler.BuildImageByText">
+            <summary>
+            生成验证码图片
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.HttpHandler.BuildImageByText.Build(System.String,System.Web.HttpContext@)">
+            <summary>
+            根据请求返回需要的验证码图片
+            </summary>
+            <param name="context">httpContext对象</param>
+            <param name="strValue">生成图片的文本</param>
+        </member>
+        <member name="P:Rc.WebControls.HttpHandler.BuildImageByText.FontSize">
+            <summary>
+            设置或获取字体的大小,采用unit的单位
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.HttpHandler.BuildImageByText.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.HttpHandler.BuildImageByText.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.HttpHandler.BuildImageByText.PaddingLeftRight">
+            <summary>
+            设置左右边距
+            </summary>
+        </member>
+        <member name="P:Rc.WebControls.HttpHandler.BuildImageByText.PaddingTopBottom">
+            <summary>
+            设置上下边距
+            </summary>
+        </member>
+        <member name="T:Rc.WebControls.Utility.Chinese2Spell">
+            <summary>
+            获取汉字的拼音
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.Chinese2Spell._pyValue">
+            <summary>
+            汉字的机内码数组
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.Chinese2Spell._pyName">
+            <summary>
+            机内码对应的拼音数组
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.IsHanzi(System.String)">
+            <summary>
+            判断指定的字符是否为汉字
+            </summary>
+            <param name="c">字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.Convert(System.String)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.ConvertWithBlank(System.String)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.ConvertWithSplitChar(System.String,System.String)">
+            <summary>
+            把汉字转换成拼音(全拼)
+            </summary>
+            <param name="hzString">汉字字符串</param>
+            <param name="splitChar">分隔符</param>
+            <returns>转换后的拼音(全拼)字符串</returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.GetSpellStringLower(System.String)">
+            <summary>
+            将汉字字符串转换为字母字符串，字母之间没有空格
+            </summary>
+            <param name="str">要转换的汉字字符串</param>
+            <returns>拼音缩写</returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.GetSpellStringLowerSplitWithBlank(System.String)">
+            <summary>
+            将汉字字符串转换为字母字符串，返回的字母之间用空格分隔
+            </summary>
+            <param name="str">要转换的汉字字符串</param>
+            <returns>拼音缩写</returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.Chinese2Spell.GetSpellCharLower(System.String)">
+            <summary>
+            将单个汉字转换为单个字幕（去拼音第一个字符）
+            </summary>
+            <param name="c">要转换的单个汉字</param>
+            <returns>拼音声母</returns>
+        </member>
+        <member name="T:Rc.WebControls.Utility.FileUploadManage">
+            <summary>
+            用户管理上传文件的类
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.Utility.FileUploadManage.GetSaveFullPath(Rc.WebControls.UploadFileTypes,System.String,System.String@,System.String@)">
+            <summary>
+            根据上传的文件名，生成包含文件名的文件存储的绝对URl
+            </summary>
+            <param name="fileName">需要上传的文件名</param>
+            <param name="absoluteUrl">上传后访问该文件的绝对URl地址</param>
+            <param name="saveFullPath">该文件的磁盘保存路径</param>
+            <param name="uploadFileType">上传文件类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rc.WebControls.Utility.EnumDescription">
+            <summary>
+            获取指定枚举的说明文字
+            </summary>
+        </member>
+        <member name="M:Rc.WebControls.Utility.EnumDescription.GetDescription(System.Object)">
+            <summary>
+            获取指定枚举值的文字说明
+            </summary>
+            <param name="e">枚举值</param>
+            <returns></returns>
+        </member>
+        <member name="T:Rc.WebControls.Utility.StringExt">
+            <summary>
+            用户连接多个字符串
+            </summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexNewLine">
+            <summary>匹配所有的换行和Tag空格</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexScript">
+            <summary>匹配所有的换行和Tag空格</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexPageTitle">
+            <summary>匹配Title标签内容</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexStartTag">
+            <summary>匹配一个开始HTML标签</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexEndTag">
+            <summary>匹配一个结束的HTML标签</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexNumber">
+            <summary>匹配一个或多个连续的数字</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexEmail">
+            <summary>匹配一个或多个连续的数字</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexHtmlTag">
+            <summary>所有HTML标记</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.RegexHtmlSpecialChar">
+            <summary>所有HTML特殊字符标记</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.EncodingGb2312">
+            <summary>encodingGb2312</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.EncodingBig5">
+            <summary>EncodingBig5</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.EncodingGb18030">
+            <summary>EncodingGb18030</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt._splitsUrlPath">
+            <summary>用户拆分路径和URL</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.SplitOr">
+            <summary>逻辑或的关系</summary>
+        </member>
+        <member name="F:Rc.WebControls.Utility.StringExt.SplitAnd">
+            <summary>逻辑与的关系</summary>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.IsWebLink(System.String)">
+            <summary>
+            判断一个字符串是否为标准的URL地址
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.JoinUrl(System.String,System.String[])">
+            <summary>
+            用于连接多个URL地址，最后得到的地址不以“/”结尾。
+            </summary>
+            <param name="rootUrl">根Url</param>
+            <param name="strValues">附加的Url子路径集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.JoinPath(System.String,System.String[])">
+            <summary>
+            将多个文件访问地址进行连接，最后得到的地址不以“\”结尾
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="strValues">附加的子路径集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetUriPath(System.String)">
+            <summary>
+            获取Url中除文件名以外的部分
+            </summary>
+            <param name="url">需要分析的Url</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetUriDomain(System.String)">
+            <summary>
+            返回指定URI中的域名部分。
+            </summary>
+            <param name="url">url地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetUriDomain(System.Uri)">
+            <summary>
+            返回指定URI中的域名部分。
+            </summary>
+            <param name="url">url地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetStringArrayFromString(System.String)">
+            <summary>
+            根据传入的字符串，拆分返回集合，并且返回是逻辑与的关系，还是逻辑或的关系
+            这个功能主要用于拆分多个栏目、ID、长度、Tag等数据
+            </summary>
+            <param name="strValue">输入的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetStringArrayFromString(System.String,System.Boolean@)">
+            <summary>
+            根据传入的字符串，拆分返回集合，并且返回是逻辑与的关系，还是逻辑或的关系
+            这个功能主要用于拆分多个栏目、ID、长度、Tag等数据
+            </summary>
+            <param name="strValue">输入的字符串</param>
+            <param name="isAndRelation">输出的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetGuidArrayFromString(System.String)">
+            <summary>
+            根据传入的字符串，拆分返回集合，并且返回是逻辑与的关系，还是逻辑或的关系
+            这个功能主要用于拆分多个栏目、ID、长度、Tag等数据
+            </summary>
+            <param name="strValue">输入的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetGuidArrayFromString(System.String,System.Boolean@)">
+            <summary>
+            根据传入的字符串，拆分返回集合，并且返回是逻辑与的关系，还是逻辑或的关系
+            这个功能主要用于拆分多个栏目、ID、长度、Tag等数据
+            </summary>
+            <param name="strValue">输入的字符串</param>
+            <param name="isAndRelation">输出的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetIntArrayFromString(System.String)">
+            <summary>
+            根据传入的字符串，拆分返回集合，并且返回是逻辑与的关系，还是逻辑或的关系
+            这个功能主要用于拆分多个栏目、ID、长度、Tag等数据
+            </summary>
+            <param name="strValue">输入的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetIntArrayFromString(System.String,System.Boolean@)">
+            <summary>
+            根据传入的字符串，拆分返回集合，并且返回是逻辑与的关系，还是逻辑或的关系
+            这个功能主要用于拆分多个栏目、ID、长度、Tag等数据
+            </summary>
+            <param name="strValue">输入的字符串</param>
+            <param name="isAndRelation">输出的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetStringFromList(System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            将一个字符串集合转换为一个字符串
+            </summary>
+            <param name="items">字符串集合</param>
+            <param name="splitChar">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.GetStringFromSortList(System.Collections.Generic.SortedList{System.String,System.String},System.String)">
+            <summary>
+            将一个SortedList转换为一个字符串
+            </summary>
+            <param name="items">字符串集合</param>
+            <param name="splitChar">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.ConvertExtendedASCII(System.String)">
+            <summary>
+            转换为ExtendedASCII
+            </summary>
+            <param name="strHtml">要转换的html</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.BuildNewPassword(System.Int32)">
+            <summary>
+            随机生成一个指定长度的密码
+            </summary>
+            <param name="passwordLength">密码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.ConvertToAlterText(System.String)">
+            <summary>
+            将指定的字符串转换为适合javascript中Alert能够正确输出的内容。
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rc.WebControls.Utility.StringExt.ConvertToSAH1(System.String)">
+            <summary>
+            将密码字符串转换为密码
+            </summary>
+            <param name="password">需要加密的密码</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

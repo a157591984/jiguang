@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AutoSelectAjax.aspx.cs" Inherits="PHHC.SysManagement.Web.Ajax.AutoSelectAjax" %>

@@ -1,0 +1,612 @@
+﻿@import "variable";
+
+html, body {
+    font-family: @font-family;
+}
+
+
+/*弹出框*/
+.popover {
+    border-radius: @border-radius;
+
+    .popover-title {
+        border-radius: @border-radius @border-radius 0 0;
+    }
+}
+
+/*栅格*/
+.col-xs-2-5 {
+    width: 20%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*辅助类*/
+mark {
+    background: #FFF59D;
+}
+
+.text-primary {
+    color: @color-primary;
+}
+
+.text-danger {
+    color: @color-danger;
+}
+
+.text-warning {
+    color: @color-warning;
+}
+
+.text-info {
+    color: @color-info;
+}
+
+.text-muted {
+    color: @color-muted;
+}
+
+.text-success {
+    color: @color-success;
+}
+
+.bg-primary {
+    background-color: @color-primary;
+}
+
+.bg-info {
+    background-color: @color-info;
+}
+
+.bg-success {
+    background-color: @color-success;
+}
+
+.bg-danger {
+    background-color: @color-danger;
+}
+
+.bg-warning {
+    background-color: @color-warning;
+}
+
+/*按钮*/
+.btn {
+    border-radius: @border-radius;
+    outline: none !important;
+    box-shadow: none !important;
+
+    &:hover,
+    &:visited,
+    &:focus,
+    &:active {
+        outline: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.btn-primary {
+    border-color: @color-primary;
+    background: @color-primary;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        border-color: @color-primary-hover;
+        background: @color-primary-hover;
+        box-shadow: none;
+    }
+}
+
+.btn-info {
+    border-color: @color-info;
+    background: @color-info;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        border-color: @color-info-hover;
+        background: @color-info-hover;
+        box-shadow: none;
+    }
+}
+
+.btn-success {
+    border-color: @color-success;
+    background: @color-success;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        border-color: @color-success-hover;
+        background: @color-success-hover;
+        box-shadow: none;
+    }
+}
+
+.btn-danger {
+    border-color: @color-danger;
+    background: @color-danger;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        border-color: @color-danger-hover;
+        background: @color-danger-hover;
+        box-shadow: none;
+    }
+}
+
+.btn-warning {
+    border-color: @color-warning;
+    background: @color-warning;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        border-color: @color-warning-hover;
+        background: @color-warning-hover;
+        box-shadow: none;
+    }
+}
+
+.btn-default {
+    border-color: @color-default;
+    background: #fff;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        border-color: @color-default-hover;
+        background: @color-default-hover;
+        box-shadow: none;
+    }
+}
+
+.btn-link {
+    color: @color-primary;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        color: @color-primary-hover;
+        text-decoration: none;
+    }
+}
+
+/*容器*/
+.container {
+    width: @container !important;
+}
+
+/*标签*/
+.label {
+    border-radius: 0;
+    font-weight: normal;
+}
+
+label {
+    font-weight: normal;
+}
+
+/*标签页*/
+.nav-tabs {
+    > li {
+        &.active {
+            > a,
+            > a:focus,
+            > a:hover {
+                color: @color-primary;
+                border: none;
+                border-bottom: @color-primary solid 2px;
+                background: none;
+            }
+        }
+
+        > a {
+            margin-right: 0;
+            border: none;
+            border-bottom: 2px solid transparent;
+            border-radius: 0;
+
+            &:hover {
+                color: @color-primary;
+                border-bottom-color: transparent;
+                background: none;
+            }
+
+            &:focus {
+                background: none;
+            }
+        }
+    }
+}
+
+/*下拉菜单*/
+.dropdown-menu {
+    border: 0;
+    border-radius: @border-radius;
+
+    > li {
+        > a {
+            padding: 10px 20px;
+        }
+    }
+}
+
+/*表格*/
+.table {
+    width: auto;
+    min-width: 100%;
+    max-width: none;
+    margin-bottom: 15px;
+    word-break: break-all;
+
+    + .pagination_container {
+        > .pagination {
+            margin-top: 0;
+        }
+    }
+
+    &.text-center {
+        > thead {
+            th, td {
+                text-align: center;
+            }
+        }
+    }
+
+    &.table-bordered {
+        thead {
+            tr {
+                th,
+                td {
+                    border-bottom-width: 1px;
+                }
+            }
+        }
+    }
+
+    thead {
+        background: #f5f5f5;
+
+        th, td {
+            vertical-align: middle;
+            border-bottom: 0;
+
+            &.text-left {
+                text-align: left;
+            }
+
+            &.text-right {
+                text-align: right;
+            }
+        }
+    }
+
+    tbody {
+        + tbody {
+            border-top: 0;
+        }
+
+        tr {
+            td {
+                a {
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    &:not(.btn) {
+                        &:not(.text-muted) {
+                            color: @color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*面板*/
+.panel {
+    border-radius: @border-radius;
+    margin-bottom: 10px;
+    box-shadow: none;
+
+    &.panel-default {
+        border-color: @border-color;
+    }
+
+    > .panel-heading {
+        height: 50px;
+        position: relative;
+        padding: 0;
+
+        > .panel-control {
+            float: right;
+            height: 100%;
+            position: relative;
+
+            &:before {
+                content: '';
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            > .btn {
+                height: 24px;
+                line-height: 24px;
+                display: inline-block;
+                vertical-align: middle;
+                box-sizing: content-box;
+            }
+        }
+
+        > .panel-title {
+            height: 100%;
+            line-height: 24px;
+            padding: 13px 15px;
+        }
+    }
+}
+
+
+
+/*表单*/
+textarea {
+    -webkit-resize: none;
+    resize: none;
+}
+
+.form-control {
+    border-radius: @border-radius;
+    border-color: @border-color;
+    box-shadow: none;
+
+    &:focus {
+        border-color: @color-primary;
+        box-shadow: none;
+    }
+
+    &[disabled],
+    &[readonly] {
+        background-color: @background-color;
+    }
+}
+
+.input-group-addon {
+    border-radius: @border-radius;
+    border-color: @border-color;
+    background: #fff;
+
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.checkbox {
+    label {
+        margin-right: 8px;
+    }
+}
+
+.form-group {
+    .required {
+        &:before {
+            content: '*';
+            color: @color-danger;
+            margin-right: 5px;
+            vertical-align: -1px;
+        }
+    }
+}
+
+/*分页*/
+.pagination_container {
+    text-align: right;
+}
+
+.pagination {
+    margin: 15px 0;
+}
+
+.pagination li.current a {
+    background: @color-primary;
+    color: @color-reverse;
+}
+
+
+.pagination li.current.home a,
+.pagination li.current.prev a,
+.pagination li.current.next a {
+    background: #fff;
+    color: @color;
+    border-color: @border-color;
+}
+
+.pagination a {
+    border: 1px solid @border-color;
+}
+
+.pagination .spanfont {
+    cursor: default;
+    background: #fff;
+}
+
+.pagination .active:not(.current) a {
+    height: 32px;
+    border: none;
+    background: none;
+    color: @color;
+}
+
+.pagination .active:not(.current) a:hover {
+    color: @color;
+    background: none;
+}
+
+.pagination li:last-child a {
+    padding-right: 0;
+}
+
+.pagination select {
+    height: 32px;
+    margin-top: -7px;
+    border: @border-color solid 1px;
+    border-radius: @border-radius;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    border-color: @border-color;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: @border-radius;
+    border-bottom-left-radius: @border-radius;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: @color-primary;
+    border-color: @color-primary;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: @color-primary;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    color: @color-primary-hover;
+}
+
+.pagination li.current a {
+}
+
+/*提示框*/
+.alert {
+    border-radius: @border-radius;
+    margin-bottom: @spacing;
+}
+
+.alert-default {
+    background-color: #f5f5f5;
+    border-color: @border-color;
+}
+
+.alert-danger {
+    border-color: @color-danger;
+    color: @color-danger-hover;
+}
+
+.alert-info {
+    border-color: @color-info;
+    color: @color-info-hover;
+}
+
+.alert-warning {
+    border-color: @color-warning;
+    color: @color-warning-hover;
+}
+
+.alert-success {
+    border-color: @color-success;
+    color: @color-success-hover;
+}
+
+/*导航条*/
+
+.navbar {
+    border-radius: 0;
+
+    &.navbar-default {
+        background-color: @color-primary;
+        border: none;
+        margin: 0;
+
+        .material-icons {
+            font-size: 24px;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            color: rgba(255,255,255,.85);
+            font-size: 20px;
+            line-height: 20px;
+            padding-top: 21px;
+            padding-bottom: 21px;
+            width: @iframe-sidebar-width;
+            height: 64px;
+
+            &:focus,
+            &:hover {
+                color: rgba(255,255,255,.85);
+            }
+        }
+
+        .navbar-nav {
+            > .open {
+                > a,
+                > a:focus,
+                > a:hover {
+                    color: #fff;
+                    background-color: @color-primary-hover;
+                }
+            }
+
+            > li {
+                .dropdown-menu {
+                    margin-top: 2px;
+                    border-radius: 2px;
+                }
+
+                &.active {
+                    > a,
+                    > a:focus,
+                    > a:hover {
+                        color: #fff;
+                        background-color: @color-primary-hover;
+                    }
+                }
+
+                > a {
+                    color: #fff;
+                    color: rgba(255,255,255,.85);
+                    line-height: 24px;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+
+                    &:focus,
+                    &:hover {
+                        color: #fff;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

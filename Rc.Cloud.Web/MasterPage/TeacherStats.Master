@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TeacherStats.master.cs" Inherits="Rc.Cloud.Web.MasterPage.TeacherStats" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=Rc.Common.ConfigHelper.GetConfigString("WebSiteName") %></title>
+    <link href="../plugin/fontawesome/fontawesome.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/function.js"></script>
+    <script src="../plugin/layer/layer.js"></script>
+    <script src="../js/common.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body_bg">
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="fixed_sidebar">
+                <ul id="fixedSidebar">
+                    <%=LeftNAV %>
+                </ul>
+            </div>
+            <div class="test_paper_panel">
+                <div class="panel_heading">
+                    <!-- 试卷名称 -->
+                    <div class="test_paper_name_panel">
+                        <div class="panel_heading">
+                            <h3 class="panel_title">
+                                <asp:Literal ID="ltlHomeWork_Name" runat="server"></asp:Literal></h3>
+                            <ul class="panel_info">
+                                <li>年级：<asp:Literal ID="ltlGrade" runat="server"></asp:Literal></li>
+                                <li>学科：<asp:Literal ID="ltlSubjectName" runat="server"></asp:Literal></li>
+                                <li>老师：<asp:Literal ID="ltlTeacherName" runat="server"></asp:Literal></li>
+                                <li>满分：<asp:Literal ID="ltlSumSore" runat="server"></asp:Literal>分</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <%--<a href="javascript:closeWP();" class="close_page"><i class="fa fa-close"></i>关闭页面</a>--%>
+
+                <asp:ContentPlaceHolder ID="Container" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(function () {
+            //导航默认状态
+            var arrUrl = [
+                ["StudentAchievementTrack.aspx", "KnowledgeMasterList.aspx", "ComparisonBetweenClasses.aspx", "StudentAchievementTrack.aspx"],
+                [""],
+                ["StatsHWTQList.aspx"],
+                ["TQScoreComparison.aspx", "KPScoreComparison.aspx"],
+                [""]
+            ]
+            var hostUrl = window.location.pathname.toLowerCase();
+            hostUrl = hostUrl.substr(hostUrl.lastIndexOf("/") + 1);
+            var firstChk = SelectedMenu(hostUrl);//一级页面修改导航默认状态
+
+            if (!firstChk) {//根据二级页面修改导航默认状态
+                var arrParent = arrUrl[0].join(",").toLowerCase().split(",");
+                for (var i = 0; i < arrUrl.length; i++) {
+                    var arrSub = arrUrl[i].join(",").toLowerCase().split(",");
+                    var idx = $.inArray(hostUrl, arrSub);
+                    if (idx != -1) {
+                        if (SelectedMenu(arrParent[i - 1])) {
+                            return;
+                        }
+                    }
+                }
+            }
+            //$('[data-name="nav"] li:eq(0) a').addClass('active');
+        });
+        function SelectedMenu(hostUrl) {
+            var flag = false;
+            $('#fixedSidebar li').each(function () {
+                var _href = $(this).find('a').attr("href").toLowerCase();
+                _href = _href.substr(_href.lastIndexOf("/") + 1);
+                if (_href.indexOf(hostUrl) != -1) {
+                    $(this).addClass("active");
+                    flag = true;
+                    return;
+                }
+            });
+            return flag;
+        }
+    </script>
+    <noscript>
+        <div class="alert alert-warning text-center noscript">对不起，你的浏览器不支持或者禁用了脚本功能。</div>
+    </noscript>
+</body>
+</html>

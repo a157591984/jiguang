@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tchAssignTQ.aspx.cs" Inherits="Rc.Cloud.Web.teacher.tchAssignTQ" %>

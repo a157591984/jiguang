@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sys.Master.cs" Inherits="Rc.Cloud.Web.MasterPage.sys" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>内容管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../SysLib/plugin/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../SysLib/plugin/mtree-2.0/mtree.css" rel="stylesheet" />
+    <link href="../SysLib/css/style.css" rel="stylesheet" />
+
+    <script src="../SysLib/js/jquery.min-1.9.1.js"></script>
+    <script src="../SysLib/plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../SysLib/js/function.js"></script>
+    <script src="../SysLib/plugin/mtree-2.0/mtree.js"></script>
+    <script src="../SysLib/plugin/layer-3.0.1/layer.js"></script>
+    <script src="../SysLib/js/jquery-jtemplates.js"></script>
+    <script src="../SysLib/js/jq.pagination.js"></script>
+    <script src="../SysLib/js/json2.js"></script>
+    <script src="../SysLib/js/base64.js"></script>
+    <script src="../SysLib/js/index.js"></script>
+    <script>
+        $(function () {
+            $('[data-name="sidebar"]').mtree({
+                data: JSON.parse('<%=strSidebarData%>').data,
+                currentId: $('#hid_Module_Id').val(),
+                onClick: function (obj, url) {
+                    window.location.href = url;
+                }
+            });
+        })
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" name="form1" runat="server">
+        <div class="iframe_header header">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="javascript:;"><i class="fa fa-cube"></i>&nbsp;<%=strSysName %></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="nav navbar-nav">
+                            <%=GetFristMenu() %>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">欢迎：<%=loginUser.SysUser_Name%> <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<%=Rc.Common.StrUtility.clsUtility.getHostPath() %>/Sys/ChangePassWord.aspx">修改密码</a></li>
+                                    <li><a href="<%=Rc.Common.StrUtility.clsUtility.getHostPath() %>/Logout.aspx">退出系统</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="iframe_wrap">
+            <div class="iframe_sidebar sidebar">
+                <div class="mtree" data-name="sidebar"></div>
+                <%--<%=strTree %>--%>
+            </div>
+            <div class="iframe_content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <asp:HiddenField ID="hid_Module_Id" runat="server" ClientIDMode="Static" />
+        <asp:HiddenField ID="hid_Module_Ids" runat="server" />
+        <asp:HiddenField ID="hid_LoginUserId" runat="server" />
+    </form>
+    <asp:ContentPlaceHolder ID="JSContent" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

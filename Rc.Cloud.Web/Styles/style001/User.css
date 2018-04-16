@@ -1,0 +1,92 @@
+﻿/*资源列表*/
+.tab_list thead tr td { height: 37px; border-bottom: #E4EBF1 solid 1px; line-height: 37px; background: #F3F6FD; color: #536083; }
+.tab_list tbody tr td { height: 32px; border-bottom: #E9F0F6 solid 1px; padding: 6px 0; color: #A6A9AE; }
+.tab_list_opera a { margin: 0 10px 0 0; color: #A6A9AE; display: inline-block; }
+.tab_list_opera a:hover { color: #75809c; }
+.tab_list tbody tr td.tab_list_title { color: #333; padding-left: 15px; }
+.tab_title { padding-left: 15px; }
+.tab_size { width: 80px; }
+.tab_date { width: 140px; }
+.tab_opera { width: 189px; }
+.page { height: 50px; text-align: center; line-height: 50px; }
+
+/*树状菜单icon16*/
+.icon_tree { width: 16px; height: 16px; display: inline-block; vertical-align: -3px; margin: 0px 5px 0px 1px; background: url(../../images/images003/icons001/icon_tree.png) no-repeat 0px 0px; }
+.icon_tree_folder16 { background-position: 0px 2px; }
+.icon_tree_pdf16 { background-position: 0px -84px; }
+.icon_tree_word16 { background-position: 0px -20px; }
+.icon_tree_xlsx16, .icon_tree_xls16 { background-position: 0px -41px; }
+.icon_tree_ppt16 { background-position: 0px -62px; }
+.icon_tree_txt16 { background-position: 0px -105px; }
+.icon_tree_other16 { background-position: 0px -126px; }
+.icon_tree_rar16 { background-position: 0px -192px; }
+.icon_tree_zip16 { background-position: 0px -214px; }
+.icon_tree_dsc16 { background-position: 0px -147px; }
+.icon_tree_class16, .icon_tree_xpt16 { background-position: 0px -170px; }
+
+/*筛选*/
+.filter {
+    margin-bottom: 10px;
+}
+
+.filter label {
+    font-weight: normal;
+}
+
+.filter .form-group:first-child label:first-child {
+    min-width: 85px;
+    text-align: right;
+}
+
+.filter_row {
+    padding: 10px 0 0;
+    border-bottom: 1px solid #edf1f2;
+    position:relative;
+}
+
+.filter_row .row_name {
+    width: 84px;
+    height: 20px;
+    line-height: 30px;
+    text-align: right;
+    float: left;
+}
+
+.filter_row .row_switch{
+    position:absolute;
+    right:0;
+    top:10px;
+}
+
+.filter_row .row_switch + .row_item{
+    margin-right:55px;
+}
+.filter_row .row_switch + .row_item ul{
+    height:30px;
+    overflow:hidden;
+}
+.filter_row .row_item {
+    margin-left: 84px;
+    min-height: 40px;
+}
+
+.filter_row .row_item ul {
+    margin: 0;
+}
+
+.filter_row .row_item li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.filter_row .row_item li a {
+    display: block;
+    line-height: 14px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+}
+
+.filter_row .row_item li a.active {
+    background: #159C77;
+    color: #fff;
+}

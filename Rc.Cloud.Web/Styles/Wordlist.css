@@ -1,0 +1,116 @@
+﻿
+.bgcolorblue
+{
+    background-color: #E2EFF5;
+}
+
+.table_listChild
+{
+    color: #353536;
+    text-align: center;
+    float: none;
+    width: 100%;
+}
+
+    .table_listChild td
+    {
+        padding: 1px;
+    }
+
+    .table_listChild th
+    {
+        font-weight: 900;
+        border: 1px solid #DDDDDD;
+    }
+
+.tr_titleChild
+{
+    border-top: 1px solid #dddddd;
+    background-color: #f0f0f0;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+    .tr_titleChild td
+    {
+        text-align: center;
+        height: 19px;
+        border-right: 1px solid #DDDDDD;
+    }
+
+.tr_con_1
+{
+    height: 30px;
+    color: #3c3c3c;
+    text-align: center;
+}
+
+    .tr_con_1 td
+    {
+        padding-left: 5px;
+        border-bottom: 1px solid #DDDDDD;
+        border-right: 1px solid #DDDDDD;
+    }
+
+.tr_con_2
+{
+    height: 30px;
+    color: #3c3c3c;
+    text-align: left;
+    text-align: center;
+}
+
+    .tr_con_2 td
+    {
+        padding-left: 5px;
+        border-bottom: 1px solid #DDDDDD;
+        border-right: 1px solid #DDDDDD;
+    }
+
+.div_sub
+{
+    width: 100%;
+    margin: 10px 10px 10px 10px;
+    border-style: solid solid solid none;
+}
+
+#list_msg
+{
+    display: none;
+    position: absolute;
+    width: 90px;
+}
+
+.list_msg
+{
+    width: 98%;
+}
+
+.div_up
+{
+    height: 15px;
+    width: 98%;
+}
+
+.div_float
+{
+    height: 15px;
+    width: 127px;
+    background-image: url('../headerImages/TheAarrow.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.div_down
+{
+    border: 1px solid #7F8A99;
+    float: none;
+    width: 98%;
+    margin-top: -4px;
+}
+
+.clear
+{
+    clear: both;
+}

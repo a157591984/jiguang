@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A691C87-7C2E-4268-BD45-228FA50718F8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Rc.Cloud.Model</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Rc.Cloud.Model</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_DatabaseCopyLibraryParam.cs" />
+    <Compile Include="Rc\Cloud\Model\DictionarySQlMaintenanceModel.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_Formulations_Dict.cs" />
+    <Compile Include="Rc\Cloud\Model\MODEL_V_Common_Dict.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_CustomVisitAttachment.cs" />
+    <Compile Include="Rc\Model\Resources\GH_PagerInfo!1.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ResourceShare.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistToTeacher.cs" />
+    <Compile Include="Rc\Model\Resources\UserGroup_AttrEnum.cs" />
+    <Compile Include="Rc\Model\Resources\MembershipEnum.cs" />
+    <Compile Include="Rc\Model\Resources\MsgEnum.cs" />
+    <Compile Include="Rc\Model\Resources\MsgTypeEumn.cs" />
+    <Compile Include="Rc\Model\Resources\MsgStatus.cs" />
+    <Compile Include="Rc\Model\Resources\BookAttrEnum.cs" />
+    <Compile Include="Rc\Model\Resources\ConfigSchoolTypeEnum.cs" />
+    <Compile Include="Rc\Model\Resources\FileSyncType.cs" />
+    <Compile Include="Rc\Model\Resources\AudioVideoTypeEnum.cs" />
+    <Compile Include="Rc\Model\Resources\UserOrder_PaytoolEnum.cs" />
+    <Compile Include="Rc\Model\Resources\SMSPAYTemplateEnum.cs" />
+    <Compile Include="Rc\Model\Resources\TestQuestions_Type.cs" />
+    <Compile Include="Rc\Model\Resources\ComplexityText.cs" />
+    <Compile Include="Rc\Model\Resources\RtrfType.cs" />
+    <Compile Include="Rc\Model\Resources\CustomizeHtmlTypeEnum.cs" />
+    <Compile Include="Rc\Model\Resources\ClientTabTypeEnum.cs" />
+    <Compile Include="Rc\Model\Resources\KnowledgePointAttrEnum.cs" />
+    <Compile Include="Rc\Model\Resources\TQ_AttrExtend.cs" />
+    <Compile Include="Rc\Model\Resources\TQ_Score_AttrExtend.cs" />
+    <Compile Include="Rc\Model\Resources\ResourceToResourceFolder_Attr.cs" />
+    <Compile Include="Rc\Model\Resources\PrpeLessonStageEnum.cs" />
+    <Compile Include="Rc\Model\Resources\ThirdPartyEnum.cs" />
+    <Compile Include="Rc\Model\Resources\Model_AudioVideoBook.cs" />
+    <Compile Include="Rc\Model\Resources\Model_AudioVideoIntro.cs" />
+    <Compile Include="Rc\Model\Resources\Model_BookArea.cs" />
+    <Compile Include="Rc\Model\Resources\Model_BookAttrbute.cs" />
+    <Compile Include="Rc\Model\Resources\Model_BookAttr_School.cs" />
+    <Compile Include="Rc\Model\Resources\Model_BookAudit.cs" />
+    <Compile Include="Rc\Model\Resources\Model_BookProductionLog.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Bookshelves.cs" />
+    <Compile Include="Rc\Model\Resources\Model_BookshelvesLog.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ChapterAssembly_TQ.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ClientTab.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ClientTabToTab.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ConfigSchool.cs" />
+    <Compile Include="Rc\Model\Resources\Model_CustomizeHtml.cs" />
+    <Compile Include="Rc\Model\Resources\Model_DictRelation.cs" />
+    <Compile Include="Rc\Model\Resources\Model_DictRelation_Detail.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ExeccuteDataAnalysis.cs" />
+    <Compile Include="Rc\Model\Resources\Model_FileSyncExecRecord.cs" />
+    <Compile Include="Rc\Model\Resources\Model_FileSyncExecRecordDetail.cs" />
+    <Compile Include="Rc\Model\Resources\Model_FileSyncRecord.cs" />
+    <Compile Include="Rc\Model\Resources\Model_FileSyncRecordFail.cs" />
+    <Compile Include="Rc\Model\Resources\Model_F_User_Client.cs" />
+    <Compile Include="Rc\Model\Resources\Model_F_User_GradeTerm.cs" />
+    <Compile Include="Rc\Model\Resources\Model_f_user_token.cs" />
+    <Compile Include="Rc\Model\Resources\Model_GradeTermSubjectTeacherBooks.cs" />
+    <Compile Include="Rc\Model\Resources\Model_PagerInfo!1.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ClassPool.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Common_Dict.cs" />
+    <Compile Include="Rc\Model\Resources\Model_DatabaseCopyLibrary.cs" />
+    <Compile Include="Rc\Model\Resources\Model_DictionarySQlMaintenance.cs" />
+    <Compile Include="Rc\Model\Resources\Model_F_User.cs" />
+    <Compile Include="Rc\Model\Resources\Model_HelpCenter.cs" />
+    <Compile Include="Rc\Model\Resources\Model_HomeWork.cs" />
+    <Compile Include="Rc\Model\Resources\Model_HomeworkToTQ.cs" />
+    <Compile Include="Rc\Model\Resources\Model_HWScoreLevelDict.cs" />
+    <Compile Include="Rc\Model\Resources\Model_HW_TestPaper.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Msg.cs" />
+    <Compile Include="Rc\Model\Model_NoticeBoard.cs" />
+    <Compile Include="Rc\Model\Resources\Model_PrpeLesson.cs" />
+    <Compile Include="Rc\Model\Resources\Model_PrpeLesson_Person.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Regional_Dict.cs" />
+    <Compile Include="Rc\Model\Resources\Model_RelationPaperTemp.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Resource.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ResourceFolderForClient.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ResourceFolder.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ResourceToResourceFolder.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ResourceToResourceFolder_img.cs" />
+    <Compile Include="Rc\Model\Resources\Model_ResourceToResourceFolder_Property.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SchoolSMS.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SchoolSMS_Person.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SendMessageTemplate.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SendSMSRecord.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsAllActivity.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsAllMember.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_Corrected.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_CorrectedInData.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_KPInData.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_ScoreLevel.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_Subsection.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassHW_TQ.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsClassStudentHW_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeClassHW_Hierarchy.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeClassHW_TOPN.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeHW_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeHW_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeHW_ScoreLevel.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeHW_Subsection.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeHW_TQ.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsGradeStudentHW_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsHelper.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsLog.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsSchoolActivity.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsSchoolMember.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStudentHW_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStudentHW_KPInData.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_Analysis_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_Analysis_KP_Info.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_TQ_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_TQ_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_Wrong_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsStuHW_Wrong_TQ.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherClassHW_Hierarchy.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherHW_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherHW_KPInData.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherHW_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherHW_ScoreLevel.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherHW_Subsection.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherHW_TQ.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsTeacherStudentHW_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsVisitClient.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatsVisitWeb.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StudentToParent.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_HomeWork.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_HomeWorkAnswer.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_HomeWork_Correct.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_HomeWork_Submit.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_Mutual_Correct.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_Mutual_CorrectSub.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_Mutual_CorrectSub_Temp.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_Mutual_Correct_Temp.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Student_WrongHomeWork.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SyncData.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SyncFileToSchool.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SyncFileToSchoolData.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SyncFileToSchoolDataDetail.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SyncFileToSchoolDataDetail2.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysCode.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysDepartment.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysFilter.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysModule.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysModuleFunction.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysModuleFunctionRole.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysModuleFunctionUser.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysModuleHistory.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysRole.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SystemLog.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SystemLogError.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SystemLogFileSync.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysUser.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysUserRoleRelation.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysUser_token.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Sys_Function.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_KnowledgePoint.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_KnowledgePointAttrExtend.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_KnowledgePointBasic.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_MeasureTarget.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_TestingPoint.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_TestingPointBasic.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_TestQuestions_KP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_S_TestQuestions_TP.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestPaper_Frame.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestPaper_FrameDetail.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestPaper_FrameDetailToTestQuestions.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestPaper_FrameDetailToTestQuestions_Attr.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestPaper_FrameToTestpaper.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TPIFUser.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TPSchoolIF.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistAudit.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistAuth.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistDetailToAttr.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistDetailToTestQuestions.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistToTestpaper.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestQuestions.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestQuestions_Option.cs" />
+    <Compile Include="Rc\Model\Resources\Model_TestQuestions_Score.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklist.cs" />
+    <Compile Include="Rc\Model\Resources\Model_Two_WayChecklistDetail.cs" />
+    <Compile Include="Rc\Model\Resources\Model_UserBuyResources.cs" />
+    <Compile Include="Rc\Model\Resources\Model_UserGroup.cs" />
+    <Compile Include="Rc\Model\Resources\Model_UserGroup_Member.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysUserTask.cs" />
+    <Compile Include="Rc\Model\Resources\Model_SysUserTaskForderTree.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatRes_Doc.cs" />
+    <Compile Include="Rc\Model\Resources\Model_StatRes_Doc_Attr.cs" />
+    <Compile Include="Rc\Model\Resources\Model_UserOrder.cs" />
+    <Compile Include="Rc\Model\Resources\Model_UserOrder_Comment.cs" />
+    <Compile Include="Rc\Model\Resources\Model_visit_client.cs" />
+    <Compile Include="Rc\Model\Resources\Model_visit_client_s.cs" />
+    <Compile Include="Rc\Model\Resources\Model_visit_web.cs" />
+    <Compile Include="Rc\Model\Resources\Model_visit_web_s.cs" />
+    <Compile Include="Rc\Model\Resources\UOrderStatus.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_Common_Dict.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_DictionarySQlMaintenance.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_ExecutionStep.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_DatabaseCopyLibrary.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_ExecutionHardware.cs" />
+    <Compile Include="Rc\Cloud\Model\Common_DictModel.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_Struct_Func.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysConfigurationItems_Dict.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysDepartment.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysModule.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysModuleFunction.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysModuleFunctionRole.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysModuleFunctionUser.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysProduct.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysRole.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysRoleParameter.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SystemLog.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SystemLogError.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysUser.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_SysUserRole.cs" />
+    <Compile Include="Rc\Cloud\Model\SysUser_For_CustomerInfoModel.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_Sys_Function.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_VSysUserRole.cs" />
+    <Compile Include="Rc\Cloud\Model\SysUserRoleRelationModel.cs" />
+    <Compile Include="Rc\Cloud\Model\SysRoleModel.cs" />
+    <Compile Include="Rc\Cloud\Model\Model_F_User.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/tree/tree.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="iframe-header">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="javascript:;">我的空间</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="oHomework.aspx">我的作业</a></li>
+                        <li><a href="CorrectHomework.aspx">批改作业</a></li>
+                        <li><a href="classList.aspx">我的班</a></li>
+                        <li><a href="allTeachingPlan.aspx">购买教案/习题</a></li>
+                        <li><a href="message.aspx">消息</a></li>
+                        <li><a href="../Help/FAQ.aspx" target="_blank">帮助</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle">
+                                <i class="material-icons">&#xE853;</i>&nbsp;周舒1学生
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="basicSetting.aspx">个人中心</a></li>
+                                <li>
+                                    <a href="http://localhost:1528/LogoutWeb.aspx">退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="iframe-subnav">
+        <ul class="subnav">
+            <li><a href="oHomework.aspx">最新作业</a></li>
+            <li><a href="St_oHistoryHomework.aspx">历次作业</a></li>
+            <li><a href="oWrongHomework.aspx">错题集</a></li>
+            <li><a href="AchievementTrack.aspx">成绩跟踪</a></li>
+            <li><a href="CheckStuHWAnalysis.aspx" class="active">综合分析</a></li>
+        </ul>
+    </div>
+    <div class="iframe-container pa">
+        <div class="comprehensive_data_analysis">
+            <div class="filter">
+                <div class="filter_section">
+                    <div class="filter_row clearfix">
+                        <span class="row_name">学科：</span>
+                        <div class="row_item">
+                            <ul ajax-name="Subject"></ul>
+                        </div>
+                    </div>
+                    <div class="filter_row clearfix">
+                        <span class="row_name">课本：</span>
+                        <div class="row_item">
+                            <ul ajax-name="BookType"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_sidebar">
+                    <div class="title">全部</div>
+                    <div class="tree">
+                        <ul data-level="1">
+                            <li>
+                                <div class="name active">
+                                    <i class="tree_btn fa"></i>
+                                    <i class="tree_checkbox"><input type="checkbox" value="" /></i>
+                                    <a href="##">第一章 集合与函数概念</a>
+                                </div>
+                                <ul data-level="2">
+                                    <li>
+                                        <div class="name">
+                                            <i class="tree_btn fa"></i>
+                                            <a href="##">1.1 集合</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_main">
+                    <ul class="nav nav-tabs mb">
+                        <li class="active"><a href="##">分析内容</a></li>
+                        <li><a href="##">知识点掌握情况</a></li>
+                        <li><a href="##">错题数据分析</a></li>
+                        <li><a href="##">历次作业成绩趋势图</a></li>
+                        <li><a href="##">提分方案</a></li>
+                    </ul>
+                    <h4>分析内容</h4>
+                    <p>本次综合分析涵盖：第五章、第六章、第七章，共 120道题目</p>
+                    <table class="table table-bordered" data-name="tablesorter">
+                        <thead>
+                            <tr>
+                                <th>知识点</th>
+                                <th width="140">知识点掌握程度</th>
+                                <th width="90">作业总数</th>
+                                <th width="90">答对题</th>
+                                <th width="100">答错题详情</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>知识点掌握情况</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

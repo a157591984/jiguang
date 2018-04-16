@@ -1,0 +1,88 @@
+.knowledge_list {
+	width: 60%;
+	float: left;
+}
+.select_class {
+	width: 30%;
+	margin-left: 20px;
+}
+.select_class h2 {
+	font-size: 15px;
+	line-height: 40px;
+	font-weight: normal;
+}
+.select_class h2 span {
+	font-size: 12px;
+	color: #999;
+	padding-left: 10px;
+}
+.select_class table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	background: #ccc;
+	text-align: center;
+	cursor: pointer;
+}
+.select_class table td {
+	background: #fff;
+	height: 32px;
+}
+.select_class table td a {
+	display: block;
+	width: 100%;
+	min-width: 80px;
+	height: calc(100% + 2px);
+	margin: -1px 0 0 -1px;
+	line-height: 32px;
+	border: #ccc solid 1px;
+}
+.select_class table td a:hover {
+	background: #D0EBE4;
+}
+.select_class table td a.active {
+	background: #159C77;
+	border-color: #fff;
+	color: #fff;
+}
+
+/*习题*/
+.exercise_box {
+    font-family: 'Microsoft YaHei',arial;
+    font-size: 14px;
+}
+.exercise_box .stem {
+	line-height: 24px;
+	padding: 20px 0 10px;
+}
+.exercise_box .attr_box{
+
+}
+.exercise_box .attr_main{
+
+}
+.exercise_box .attr_main dl{
+	padding: 5px 0;
+	line-height: 20px;
+}
+.exercise_box .attr_main dt{
+	width: 100px;
+	float: left;
+}
+.exercise_box .attr_main dd{
+	margin-left: 100px;
+}
+.chart_btn{
+	position: relative;
+}
+.chart_btn a{
+	height:30px;
+	line-height: 30px;
+	padding:0 10px;
+	text-indent: 0;
+	background: #159C77;
+	display: inline-block;
+	position: absolute;
+	right:0px;
+	top: -5px;
+	color: #fff;
+}

@@ -1,0 +1,13 @@
+D:\work\Novoasoft\作业\trunk\Rc.WebControls\bin\Release\Rc.WebControls.dll
+D:\work\Novoasoft\作业\trunk\Rc.WebControls\bin\Release\Rc.WebControls.pdb
+D:\work\Novoasoft\作业\trunk\Rc.WebControls\obj\Release\Rc.WebControls.dll
+D:\work\Novoasoft\作业\trunk\Rc.WebControls\obj\Release\Rc.WebControls.pdb
+D:\work\Novoasoft\作业\branches\2018\Rc.WebControls\bin\Release\Rc.WebControls.dll
+D:\work\Novoasoft\作业\branches\2018\Rc.WebControls\bin\Release\Rc.WebControls.pdb
+D:\work\Novoasoft\作业\branches\2018\Rc.WebControls\obj\Release\Rc.WebControls.dll
+D:\work\Novoasoft\作业\branches\2018\Rc.WebControls\obj\Release\Rc.WebControls.pdb
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Release\Rc.WebControls.dll
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\bin\Release\Rc.WebControls.pdb
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Release\Rc.WebControls.csprojResolveAssemblyReference.cache
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Release\Rc.WebControls.dll
+E:\zhiyun\dongfangjigangCode\Rc.WebControls\obj\Release\Rc.WebControls.pdb

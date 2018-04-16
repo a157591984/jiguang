@@ -1,0 +1,60 @@
+﻿
+/*智能匹配选择样式-开始*/
+.AutoCompleteSelected {
+    background-color: #ddd;
+    padding: 2px;
+}
+
+.AutoCompleteNoSelected {
+    border: 0px solid #ddd;
+    background-color: White;
+    padding: 2px;
+}
+
+.spanLinkAutoComplete {
+    cursor: pointer;
+}
+
+.AutoCompleteVectors {
+    z-index: 1000;
+    position: absolute;
+    border: 1px solid #ccc;
+    display: none;
+    min-width: 150px;
+}
+
+.topAutoComplete {
+    border-bottom: 1px dashed #ddd;
+    padding: 5px;
+}
+
+.divAutoComplete {
+    border: 0px;
+    line-height: 20px;
+}
+
+.divAutoComplete ul {
+    margin: 0;
+}
+
+.divAutoComplete li {
+    padding: 5px;
+}
+
+.flipAutoComplete {
+    padding: 0 10px 10px 10px;
+    line-height: 30px;
+}
+
+.AutoCompleteDataList {
+    padding-bottom: 0px;
+}
+
+.spanLinkAutoComplete:hover {
+    text-decoration: none;
+}
+
+.AutoCompleteNoData {
+    color: red;
+}
+/*智能匹配选择样式-结束*/

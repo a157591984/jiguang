@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PrincipalAnalysis.master.cs" Inherits="Rc.Cloud.Web.MasterPage.PrincipalAnalysis" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=Rc.Common.ConfigHelper.GetConfigString("WebSiteName") %></title>
+    <link href="../plugin/fontawesome/fontawesome.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/function.js"></script>
+    <script src="../plugin/layer/layer.js"></script>
+    <script src="../js/common.js"></script>
+    <asp:ContentPlaceHolder ID="StyleContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body_bg">
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="fixed_sidebar">
+                <ul data-name="sidebar">
+                    <li><a href="StatsGradeHW_TQ.aspx?GradeId=<%=GradeId %>&ResourceToResourceFolder_Id=<%=ResourceToResourceFolder_Id %>">试卷分析评价</a></li>
+                    <li><a href="ResultsPreview.aspx?GradeId=<%=GradeId %>&ResourceToResourceFolder_Id=<%=ResourceToResourceFolder_Id %>">年级成绩分析</a></li>
+                    <li><a href="StudentAchievementTrackGrade.aspx?GradeId=<%=GradeId %>&ResourceToResourceFolder_Id=<%=ResourceToResourceFolder_Id %>">学生成绩分析</a></li>
+                </ul>
+            </div>
+            <div class="test_paper_name_panel">
+                <div class="panel_heading">
+                    <div class="panel_title">
+                        <asp:Literal ID="ltlHomeWork_Name" runat="server"></asp:Literal>
+                    </div>
+                    <ul class="panel_info">
+                        <li>年级：<asp:Literal ID="ltlGrade" runat="server"></asp:Literal></li>
+                        <li>学科：<asp:Literal ID="ltlSubjectName" runat="server"></asp:Literal></li>
+                        <li>满分：<asp:Literal ID="ltlSumSore" runat="server"></asp:Literal>分</li>
+                    </ul>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <asp:ContentPlaceHolder ID="JsContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <noscript>
+        <div class="alert alert-warning text-center noscript">对不起，你的浏览器不支持或者禁用了脚本功能。</div>
+    </noscript>
+</body>
+</html>

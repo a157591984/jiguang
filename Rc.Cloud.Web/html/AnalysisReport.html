@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>单次作业分析报告</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/jquery.min-1.11.1.js"></script>
+    <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugin/highcharts/js/highcharts.js"></script>
+    <script>
+        $(function () {
+            $('#chart1').highcharts({
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: '难度分布'
+                },
+                tooltip: {
+                    headerFormat: '{series.name}<br>',
+                    pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: '试题难度占比',
+                    data: [
+                        ['容易', 45.0],
+                        ['中等', 26.8],
+                        ['困难', 8.5],
+                         ['更', 15.5]
+                    ],
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    },
+                }]
+            });
+
+            $('#chart2').highcharts({
+                credits: {
+                    enabled: false
+                },
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '题型及试题分布'
+                },
+                xAxis: {
+                    title: {
+                        text: '题型'
+                    },
+                    categories: [
+                        '选择题',
+                        '填空题',
+                        '解答题',
+                        '探究题'
+                    ],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: '数量（个）'
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px"><b>{point.key}</b>',
+                    pointFormat: '：{point.y} 个</b>',
+                    footerFormat: '</span>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    data: [6, 5, 6, 2],
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.0f}'
+                    },
+                }]
+            });
+
+            $('#chart3').highcharts({
+                creadits: {
+                    enabled: false,
+                },
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    categories: ['一元一次方程的解', '一元一次方程的应用', '综合应用', '等式性质'],
+                    title: {
+                        text: null
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: '掌握程度',
+                    }
+                },
+                tooltip: {
+                    valueSuffix: ' %'
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            allowOverlap: true
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '掌握程度',
+                    data: [75, 72, 60, 100],
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.0f}%'
+                    },
+                }]
+            });
+
+            $('#chart4').highcharts({
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: null
+                },
+                tooltip: {
+                    headerFormat: '',
+                    pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    //name: '试题难度占比',
+                    data: [
+                        ['得分点比例', 5],
+                        ['失分点比例', 2]
+                    ],
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    },
+                }]
+            });
+
+            $('#chart5').highcharts({
+                creadits: {
+                    enabled: false
+                },
+                chart: {
+                    type: 'bar',
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                    title: {
+                        text: '题号'
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: '得分'
+                    },
+                    minTickInterval: 1
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            allowOverlap: true
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    data: [3, 1, 3, 5, 3, 5, 4, 6, 3, 6, 5, 4]
+                }]
+            });
+        });
+    </script>
+</head>
+<body class="body_bg">
+    <div class="container">
+
+        <div class="test_paper_name_panel">
+            <div class="panel_heading">
+                <h3 class="panel_title">
+                    Unit 3 Is this your pencil 测试题
+                </h3>
+                <ul class="panel_info">
+                    <li>年级：2017级初中部</li>
+                    <li>班级：初一8班</li>
+                    <li>学科：O8</li>
+                    <li>共 6 道题</li>
+                    <li>满分 30 分</li>
+                    <li>得分 25 分</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page_title">试题结构</div>
+        <div class="panel mn">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div id="chart1"></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered mn">
+                    <thead>
+                        <tr>
+                            <th>考察知识点</th>
+                            <th>题型</th>
+                            <th>题号</th>
+                            <th>分值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>等式的基本性质</td>
+                            <td>选择，填空</td>
+                            <td>1、3、5</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>一元一次方程的解</td>
+                            <td>选择，填空</td>
+                            <td>1、3、5</td>
+                            <td>18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page_title">得分情况</div>
+        <div class="panel mn">
+            <div class="panel-body">
+                <table class="table table-bordered text-center mn">
+                    <thead>
+                        <tr>
+                            <th>平均分</th>
+                            <th>最低分</th>
+                            <th>最高分</th>
+                            <th>我的得分</th>
+                            <th>班级排名</th>
+                            <th>等级分布</th>
+                            <th>层次分布</th>
+                            <th>班级人数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>24</td>
+                            <td>24</td>
+                            <td>24</td>
+                            <td>24</td>
+                            <td>第一名</td>
+                            <td>及格</td>
+                            <td>第 1 层次</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page_title">知识点掌握情况</div>
+        <div class="panel mn">
+            <div class="panel-body">
+                <div id="chart3"></div>
+            </div>
+            <div class="panel-body pn pv">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>知识点</th>
+                            <th>正确题号</th>
+                            <th>错误题号</th>
+                            <th>知识点掌握程度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>等式的基本性质</td>
+                            <td>2题</td>
+                            <td>-</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>一元一次方程的解</td>
+                            <td>1题，3题</td>
+                            <td>4.(2)题，6题</td>
+                            <td>81%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page_title">错题分析</div>
+        <div class="panel mn">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="pt clearfix">
+                            <a href="##" class="btn btn-success btn-sm mb">1</a>
+                            <a href="##" class="btn btn-success btn-sm mb">2</a>
+                            <a href="##" class="btn btn-danger btn-sm mb">3</a>
+                            <a href="##" class="btn btn-success btn-sm mb">4</a>
+                            <a href="##" class="btn btn-success btn-sm mb">5</a>
+                            <a href="##" class="btn btn-success btn-sm mb">6</a>
+                            <a href="##" class="btn btn-success btn-sm mb">7</a>
+                            <a href="##" class="btn btn-success btn-sm mb">8</a>
+                            <a href="##" class="btn btn-success btn-sm mb">9</a>
+                            <a href="##" class="btn btn-success btn-sm mb">10</a>
+                            <a href="##" class="btn btn-danger btn-sm mb">11</a>
+                            <a href="##" class="btn btn-success btn-sm mb">12</a>
+                            <a href="##" class="btn btn-success btn-sm mb">13</a>
+                            <a href="##" class="btn btn-success btn-sm mb">14</a>
+                            <a href="##" class="btn btn-success btn-sm mb">15</a>
+                            <a href="##" class="btn btn-success btn-sm mb">16</a>
+                            <a href="##" class="btn btn-danger btn-sm mb">17</a>
+                            <a href="##" class="btn btn-danger btn-sm mb">18</a>
+                            <a href="##" class="btn btn-success btn-sm mb">19</a>
+                            <a href="##" class="btn btn-success btn-sm mb">20</a>
+                            <a href="##" class="btn btn-success btn-sm mb">21</a>
+                            <a href="##" class="btn btn-success btn-sm mb">22</a>
+                            <a href="##" class="btn btn-success btn-sm mb">23</a>
+                            <a href="##" class="btn btn-success btn-sm mb">24</a>
+                            <a href="##" class="btn btn-danger btn-sm mb">25</a>
+                            <a href="##" class="btn btn-success btn-sm mb">26</a>
+                            <a href="##" class="btn btn-success btn-sm mb">27</a>
+                            <a href="##" class="btn btn-success btn-sm mb">28</a>
+                            <a href="##" class="btn btn-success btn-sm mb">29</a>
+                            <a href="##" class="btn btn-success btn-sm mb">30</a>
+                        </div>
+                        <div>本次作业共 9 道题目，20个给分点，其中有5个点失分，失分率为 25.00%；</div>
+                    </div>
+                    <div class="col-xs-8">
+                        <div id="chart4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-heading">
+                <div class="panel-title">薄弱知识点分析</div>
+            </div>
+            <div class="panel-body pn pv">
+                <table class="table table-bordered mn">
+                    <thead>
+                        <tr>
+                            <th>知识点</th>
+                            <th>重要程度</th>
+                            <th>中考对应分值</th>
+                            <th>错题难度</th>
+                            <th>题型</th>
+                            <th>错题号</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>一元一次方程的解</td>
+                            <td>★★★</td>
+                            <td>3</td>
+                            <td>中等、容易</td>
+                            <td>选择、解答</td>
+                            <td>1、4、6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-heading">
+                <div class="panel-title">错题数据分析</div>
+            </div>
+            <div class="panel-body pn pv">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>错题号</th>
+                            <th>知识点</th>
+                            <th>重要程度</th>
+                            <th>分值</th>
+                            <th>得分</th>
+                            <th>难度</th>
+                            <th>题型</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>一元一次方程的解</td>
+                            <td>★★★</td>
+                            <td>4</td>
+                            <td>2</td>
+                            <td>容易</td>
+                            <td>填空题</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>等式的性质</td>
+                            <td>★★★</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>中等</td>
+                            <td>解答题</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page_title">小题得分情况</div>
+        <div class="panel mn">
+            <div class="panel-body">
+                <div id="chart5"></div>
+            </div>
+            <div class="panel-body pn pv">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>题号</th>
+                            <th>题型</th>
+                            <th>知识点</th>
+                            <th>难度</th>
+                            <th>题目分值</th>
+                            <th>得分</th>
+                            <th>班级平均分</th>
+                            <th>班级平均分得分率</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>选择题</td>
+                            <td>一元一次方程的解</td>
+                            <td>容易</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>96%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page_title">补救提高建议</div>
+        <div class="panel mn">
+            <div class="panel-heading">
+                <div class="panel-title">建议学习的薄弱知识点</div>
+            </div>
+            <div class="panel-body pn pv">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>章</th>
+                            <th>节</th>
+                            <th>知识点</th>
+                            <th>重要程度</th>
+                            <th>未掌握程度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>第六章</td>
+                            <td>第8节</td>
+                            <td>等式的性质</td>
+                            <td>★★★</td>
+                            <td>45%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>请同学对以上知识进行补救学习或者请老师进行指导学习，并对该知识点所涉及的典型例题进行复习。</p>
+            </div>
+            <div class="panel-heading">
+                <div class="panel-title">错题重练</div>
+            </div>
+            <div class="panel-body pn pv pb">
+                请同学对本次作业中的第6题、第4（2）进行再次练习，以便从中总结规律、方法、技巧，加强知识的巩固和学习
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

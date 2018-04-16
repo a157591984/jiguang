@@ -1,0 +1,44 @@
+﻿<root>
+  <!--################## web前端模块 ##################-->
+  <web>
+    <cTeachPlan isshow="true">我的教案</cTeachPlan>
+    <CollectiveLessonPreparation isshow="true">集体备课</CollectiveLessonPreparation>
+    <pHomework isshow="true">集体备课习题集</pHomework>
+    <pHomework_API_Select isshow="true">集体备课习题集（随堂测验）</pHomework_API_Select>
+    <FAQ isshow="true">帮助</FAQ>
+    <RecordingComment isshow="false">语音批注</RecordingComment>
+    <ChapterAssembly isshow="false">章节组卷</ChapterAssembly>
+    <Two_WayChecklist isshow="true">双向细目表组卷</Two_WayChecklist>
+  </web>
+  <!--################## client客户端模块 ##################-->
+  <client>
+    <scienceword>
+      <MgrScienceWordCloudTeachingPlan isshow="true">管理员scienceword云教案</MgrScienceWordCloudTeachingPlan>
+      <MgrScienceWordCloudSkill isshow="true">管理员scienceword云习题集</MgrScienceWordCloudSkill>
+
+      <TeacherScienceWordCloudTeachingPlan isshow="true">老师scienceword云教案</TeacherScienceWordCloudTeachingPlan>
+      <TeacherScienceWordOwnTeachingPlan isshow="true">老师scienceword自有教案</TeacherScienceWordOwnTeachingPlan>
+      <TeacherScienceWordCloudSkill isshow="true">老师scienceword云习题集</TeacherScienceWordCloudSkill>
+      <TeacherScienceWordOwnSkill isshow="true">老师scienceword自有习题集</TeacherScienceWordOwnSkill>
+      <TeacherScienceWordCollectiveLessonPreparation isshow="true">老师scienceword集体备课</TeacherScienceWordCollectiveLessonPreparation>
+    </scienceword>
+    <class>
+      <MgrClassCloudTeachingPlan isshow="true">管理员class云教案</MgrClassCloudTeachingPlan>
+      <MgrClassCloudMicroClass isshow="true">管理员class微课件</MgrClassCloudMicroClass>
+
+      <TeacherClassCloudTeachingPlan isshow="true">老师class云教案</TeacherClassCloudTeachingPlan>
+      <TeacherClassComment isshow="true">老师class讲评</TeacherClassComment>
+      <TeacherClassOwnTeachingPlan isshow="true">老师class自有教案</TeacherClassOwnTeachingPlan>
+      <TeacherClassCollectiveLessonPreparation isshow="true">老师class集体备课</TeacherClassCollectiveLessonPreparation>
+
+      <StudentClassMicroClass isshow="true">学生class微课件</StudentClassMicroClass>
+      <StudentClassCloudTeachingPlan isshow="true">学生class云教案</StudentClassCloudTeachingPlan>
+    </class>
+    <skill>
+      <StudentSkillNew isshow="true">学生skill最新作业</StudentSkillNew>
+      <StudentSkillSubminted isshow="true">学生skill已提交作业</StudentSkillSubminted>
+      <StudentSkillWrong isshow="true">学生skill错题集</StudentSkillWrong>
+    </skill>
+
+  </client>
+</root>

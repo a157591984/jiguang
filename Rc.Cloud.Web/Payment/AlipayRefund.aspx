@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AlipayRefund.aspx.cs" Inherits="Com.Alipay.AlipayRefund" %>
